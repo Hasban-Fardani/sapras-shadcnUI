@@ -8,7 +8,6 @@ export default defineNuxtConfig({
     '@vite-pwa/nuxt', 
     'shadcn-nuxt',
     'nuxt-aos',
-    'nuxt-delay-hydration',
   ],
 
   shadcn: {

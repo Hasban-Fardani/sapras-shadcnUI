@@ -11,6 +11,12 @@ useHead({
   title: "Sarpas Sekolah",
   htmlAttrs: {
     lang: "id"
-  }
+  },
+  meta: [
+    {
+      name: "description",
+      value: "Aplikasi Manajemen Sarana Prasarana Sekolah"
+    }
+  ]
 })
 </script>
