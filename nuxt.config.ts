@@ -3,22 +3,49 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: [
     '@nuxtjs/tailwindcss',
+    '@nuxtjs/color-mode',
+    '@nuxt/image',
     '@vite-pwa/nuxt', 
     'shadcn-nuxt',
     'nuxt-aos',
   ],
   shadcn: {
-    /**
-     * Prefix for all the imported component
-     */
     prefix: '',
-    /**
-     * Directory that the component lives in.
-     * @default "./components/ui"
-     */
     componentDir: './components/ui'
   },
   pwa: {
-    /* PWA options */
+    manifest: {
+      name: 'Aplikasi Manajemen Sarpras',
+      short_name: 'Sarpras',
+      theme_color: '#000',
+      icons: [
+        {
+          src: 'icon-192x192.png',
+          sizes: '192x192',
+          type: 'image/png',
+        },
+        {
+          src: 'icon-512x512.png',
+          sizes: '512x512',
+          type: 'image/png',
+        },
+        {
+          src: 'icon-512x512.png',
+          sizes: '512x512',
+          type: 'image/png',
+          purpose: 'any maskable',
+        },
+      ],
+      
+    },
+    workbox: {
+      globPatterns: ['**/*.{js,css,html,png,svg,ico}'],
+    },
+    injectManifest: {
+      globPatterns: ['**/*.{js,css,html,png,svg,ico}'],
+    },
+  },
+  colorMode: {
+    classSuffix: ''
   }
 })
