@@ -9,7 +9,6 @@ export default defineNuxtConfig({
     '@vite-pwa/nuxt', 
     'shadcn-nuxt',
     'nuxt-aos',
-    'nuxt-delay-hydration',
   ],
 
   shadcn: {
@@ -51,7 +50,4 @@ export default defineNuxtConfig({
   colorMode: {
     classSuffix: ''
   },
-  delayHydration: {
-    mode: 'mounts'
-  }
 })

@@ -5,7 +5,7 @@
             <NuxtImg src="/icon.svg" alt="icon sarpras" width="30" height="30"/>
             <span class="text-lg font-semibold">Sarpras</span>
         </NuxtLink>
-        <div class="hidden md:flex gap-4" v-show="!isSm">
+        <div class="hidden md:flex gap-4">
             <NuxtLink to="#fitur">
                 <Button variant="ghost">
                     Fitur
@@ -179,7 +179,3 @@
         </span>
     </section>
 </template>
-<script setup lang="ts">
-const size = useWindowSize()
-const isSm = size.width.value < 768
-</script>
