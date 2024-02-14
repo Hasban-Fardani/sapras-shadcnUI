@@ -6,3 +6,11 @@
     </NuxtLayout>
   </div>
 </template>
+<script setup>
+useHead({
+  title: "Sarpas Sekolah",
+  htmlAttrs: {
+    lang: "id"
+  }
+})
+</script>

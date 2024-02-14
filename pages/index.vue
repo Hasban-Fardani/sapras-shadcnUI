@@ -2,7 +2,7 @@
     <!-- Header -->
     <header class="container flex justify-between h-14 max-w-screen-2xl items-center fixed" data-aos="fade-in">
         <NuxtLink to="/" class="flex gap-2 items-center">
-            <NuxtImg src="/icon.svg" width="30" height="30"/>
+            <NuxtImg src="/icon.svg" alt="icon sarpras" width="30" height="30"/>
             <span class="text-lg font-semibold">Sarpras</span>
         </NuxtLink>
         <div class="hidden md:flex gap-4">
@@ -44,14 +44,14 @@
             Buatlah manajemen Sarana Prasarana di sekolah anda menjadi mudah dan efektif
         </span>
         <div class="flex gap-4 pt-4" data-aos="fade-up">
-            <NuxtLink>
+            <NuxtLink to="/admin">
                 <Button>
                     Buka Aplikasi
                 </Button>
             </NuxtLink>
-            <NuxtLink>
+            <NuxtLink to="fitur">
                 <Button variant="outline">
-                    Info Lanjut
+                    Daftar Fitur
                 </Button>
             </NuxtLink>
         </div>
