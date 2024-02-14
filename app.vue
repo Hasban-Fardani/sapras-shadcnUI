@@ -15,7 +15,7 @@ useHead({
   meta: [
     {
       name: "description",
-      value: "Aplikasi Manajemen Sarana Prasarana Sekolah"
+      content: "Aplikasi Manajemen Sarana Prasarana Sekolah"
     }
   ]
 })
