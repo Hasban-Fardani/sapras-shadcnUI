@@ -15,6 +15,7 @@
     "@unovis/vue": "^1.3.3",
     "@vite-pwa/nuxt": "^0.5.0",
     "@vueuse/core": "^10.7.2",
+    "@vueuse/nuxt": "^10.7.2",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "date-fns": "^3.3.1",
@@ -30,6 +31,7 @@
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^6.11.4",
+    "nuxt-delay-hydration": "^1.3.3",
     "shadcn-nuxt": "^0.9.0",
     "typescript": "^5.3.3"
   }

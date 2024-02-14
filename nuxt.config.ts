@@ -5,15 +5,18 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@nuxtjs/color-mode',
     '@nuxt/image',
+    '@vueuse/nuxt',
     '@vite-pwa/nuxt', 
     'shadcn-nuxt',
     'nuxt-aos',
+    'nuxt-delay-hydration',
   ],
 
   shadcn: {
     prefix: '',
     componentDir: './components/ui'
   },
+
   pwa: {
     manifest: {
       name: 'Aplikasi Manajemen Sarpras',
@@ -37,7 +40,6 @@ export default defineNuxtConfig({
           purpose: 'any maskable',
         },
       ],
-      
     },
     workbox: {
       globPatterns: ['**/*.{js,css,html,png,svg,ico}'],
@@ -48,5 +50,8 @@ export default defineNuxtConfig({
   },
   colorMode: {
     classSuffix: ''
+  },
+  delayHydration: {
+    mode: 'mounts'
   }
 })
