@@ -18,31 +18,33 @@ async function onSubmit(event: Event) {
 </script>
 
 <template>
-  <NuxtLink
-      href="/auth/register"
-      :class="cn(
-        buttonVariants({ variant: 'ghost' }),
-        'absolute right-4 top-4 md:right-8 md:top-8',
-      )"
-    >
-      Register
-    </NuxtLink>
+  <NuxtLink href="/auth/register" :class="cn(
+    buttonVariants({ variant: 'ghost' }),
+    'absolute right-4 top-4 md:right-8 md:top-8',
+  )">
+    Register
+  </NuxtLink>
   <div class="flex flex-col space-y-2 text-center">
     <h1 class="text-2xl font-semibold tracking-tight">
       Login Akun
     </h1>
     <p class="text-sm text-muted-foreground">
-      Enter your email below to create your account
+      Masukkan nomer induk dan password untuk login
     </p>
   </div>
   <div :class="cn('grid gap-6', $attrs.class ?? '')">
     <form @submit="onSubmit">
       <div class="grid gap-2">
         <div class="grid gap-1">
-          <Label class="sr-only" for="email">
-            Email
+          <Label class="sr-only" for="nomer_induk">
+            Nomer Induk
           </Label>
-          <Input id="email" placeholder="name@example.com" type="email" auto-capitalize="none" auto-complete="email"
+          <Input id="nomer_induk" placeholder="221023201098" type="text" auto-capitalize="none"
+            auto-complete="nomer induk" auto-correct="off" :disabled="isLoading" />
+          <Label class="sr-only" for="password">
+            Password
+          </Label>
+          <Input id="password" placeholder="password anda" type="password" auto-capitalize="none" auto-complete="password"
             auto-correct="off" :disabled="isLoading" />
         </div>
         <Button :disabled="isLoading">

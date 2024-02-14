@@ -19,15 +19,12 @@ async function onSubmit(event: Event) {
 </script>
 
 <template>
-    <NuxtLink
-      href="/auth/login"
-      :class="cn(
-        buttonVariants({ variant: 'ghost' }),
-        'absolute right-4 top-4 md:right-8 md:top-8',
-      )"
-    >
-      Login
-    </NuxtLink>
+  <NuxtLink href="/auth/login" :class="cn(
+    buttonVariants({ variant: 'ghost' }),
+    'absolute right-4 top-4 md:right-8 md:top-8',
+  )">
+    Login
+  </NuxtLink>
   <div class="flex flex-col space-y-2 text-center">
     <h1 class="text-2xl font-semibold tracking-tight">
       Register Akun
@@ -41,20 +38,20 @@ async function onSubmit(event: Event) {
       <div class="grid gap-2">
         <div class="grid gap-1">
           <!-- Email -->
-          <Label class="sr-only" for="email">
-            Email
+          <Label class="sr-only" for="name">
+            Nama
           </Label>
-          <Input id="email" placeholder="name@example.com" type="email" auto-capitalize="none" auto-complete="email"
+          <Input id="name" placeholder="Leonardo Davinci" type="name" auto-capitalize="none" auto-complete="name"
             auto-correct="off" :disabled="isLoading" />
           <!-- Password -->
-          <Label class="sr-only" for="password">
-            Password
+          <Label class="sr-only" for="nomer_induk">
+            Nomer Induk
           </Label>
-          <Input id="email" placeholder="name@example.com" type="email" auto-capitalize="none" auto-complete="email"
+          <Input id="nomer_induk" placeholder="2212109092" type="text" auto-capitalize="none" auto-complete="nomer induk"
             auto-correct="off" :disabled="isLoading" />
         </div>
         <Button :disabled="isLoading">
-          
+
           Register dengan Email
         </Button>
       </div>
