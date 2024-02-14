@@ -37,8 +37,8 @@
     </header>
     <!-- Hero Section -->
     <section class="mx-auto min-h-[91vh] flex-1 flex flex-col gap-2 justify-center items-center">
-        <h1 class="text-center scroll-m-20 text-3xl font-bold leading-tight tracking-tighter lg:text-5xl lg:leading-[1.1]" data-aos="fade-up">
-            Mudahkan Manajemen<br>Sarana Prasarana Sekolah
+        <h1 class="text-center text-3xl font-bold leading-tight tracking-tighter lg:text-5xl lg:leading-[1.1]" data-aos="fade-up">
+            Aplikas Manajemen<br>Sarana Prasarana Sekolah
         </h1>
         <span class="text-center text-lg text-muted-foreground sm:text-xl" data-aos="fade-up">
             Buatlah manajemen Sarana Prasarana di sekolah anda menjadi mudah dan efektif
@@ -49,7 +49,7 @@
                     Buka Aplikasi
                 </Button>
             </NuxtLink>
-            <NuxtLink to="fitur">
+            <NuxtLink to="#fitur">
                 <Button variant="outline">
                     Daftar Fitur
                 </Button>
@@ -132,7 +132,7 @@
 
                 </CardContent>
                 <CardFooter>
-                    <NuxtLink>Pesan</NuxtLink>
+                    <NuxtLink to="#">Pesan</NuxtLink>
                 </CardFooter>
             </Card>
             <Card data-aos="fade-up">
@@ -143,7 +143,7 @@
 
                 </CardContent>
                 <CardFooter>
-                    <NuxtLink>Pesan</NuxtLink>
+                    <NuxtLink to="#">Pesan</NuxtLink>
                 </CardFooter>
             </Card>
             <Card data-aos="fade-up">
@@ -154,7 +154,7 @@
 
                 </CardContent>
                 <CardFooter>
-                    <NuxtLink>Pesan</NuxtLink>
+                    <NuxtLink to="#">Pesan</NuxtLink>
                 </CardFooter>
             </Card>
         </div>
