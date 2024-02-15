@@ -2,11 +2,13 @@
 definePageMeta({
   layout: 'admin'
 })
-</script>
 
+const tab = ref()
+console.log(tab)
+</script>
 <template>
-  <div class="hidden flex-col md:flex">
-    <div class="border-b">
+  <div class="flex flex-col">
+    <!-- <div class="border-b">
       <div class="flex h-16 items-center px-4">
         <MainNav class="mx-6" />
         <div class="ml-auto flex items-center space-x-4">
@@ -14,8 +16,8 @@ definePageMeta({
           <UserNav />
         </div>
       </div>
-    </div>
-    <div class="flex-1 space-y-4 p-8 pt-6">
+    </div> -->
+    <div class="flex-1 space-y-4 p-4 pt-6">
       <div class="flex items-center justify-between space-y-2">
         <h2 class="text-3xl font-bold tracking-tight">
           Dashboard
@@ -25,23 +27,23 @@ definePageMeta({
           <Button>Download</Button>
         </div>
       </div>
-      <Tabs default-value="overview" class="space-y-4">
+      <Tabs default-value="overview" class="space-y-4" :ref="tab">
         <TabsList>
           <TabsTrigger value="overview">
             Overview
           </TabsTrigger>
-          <TabsTrigger value="analytics" disabled>
+          <TabsTrigger value="analytics">
             Analytics
           </TabsTrigger>
-          <TabsTrigger value="reports" disabled>
+          <TabsTrigger value="reports">
             Reports
           </TabsTrigger>
-          <TabsTrigger value="notifications" disabled>
+          <TabsTrigger value="notifications">
             Notifications
           </TabsTrigger>
         </TabsList>
         <TabsContent value="overview" class="space-y-4">
-          <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+          <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-4 mt-2">
             <Card>
               <CardHeader class="flex flex-row items-center justify-between space-y-0 pb-2">
                 <CardTitle class="text-sm font-medium">
@@ -175,6 +177,9 @@ definePageMeta({
               </CardContent>
             </Card>
           </div>
+        </TabsContent> 
+        <TabsContent value="analytics">
+          p analytics
         </TabsContent>
       </Tabs>
     </div>
