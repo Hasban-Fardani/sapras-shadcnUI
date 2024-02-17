@@ -44,7 +44,7 @@
             Buatlah manajemen Sarana Prasarana di sekolah anda menjadi mudah dan efektif
         </span>
         <div class="flex gap-4 pt-4" data-aos="fade-up">
-            <NuxtLink to="/admin">
+            <NuxtLink to="/redirect">
                 <Button>
                     Buka Aplikasi
                 </Button>
@@ -75,7 +75,7 @@
             </Card>
             <Card class="w-[400px]" data-aos="fade-up">
                 <CardHeader>
-                    Dashboard
+                    Pendataan Sarana
                 </CardHeader>
                 <CardContent>
 
@@ -83,7 +83,7 @@
             </Card>
             <Card class="w-[400px]" data-aos="fade-up">
                 <CardHeader>
-                    Dashboard
+                    Pendataan Prasarana
                 </CardHeader>
                 <CardContent>
 
@@ -91,7 +91,7 @@
             </Card>
             <Card class="w-[400px]" data-aos="fade-up">
                 <CardHeader>
-                    Dashboard
+                    Export dan Import data
                 </CardHeader>
                 <CardContent>
 
@@ -99,7 +99,7 @@
             </Card>
             <Card class="w-[400px]" data-aos="fade-up">
                 <CardHeader>
-                    Dashboard
+                    Transaksi Barang
                 </CardHeader>
                 <CardContent>
 

@@ -7,8 +7,9 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@vueuse/nuxt',
     '@vite-pwa/nuxt', 
-    'shadcn-nuxt',
     'nuxt-aos',
+    'nuxt-icon',
+    'shadcn-nuxt',
   ],
 
   shadcn: {

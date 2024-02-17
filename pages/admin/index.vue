@@ -47,7 +47,7 @@ console.log(tab)
             <Card>
               <CardHeader class="flex flex-row items-center justify-between space-y-0 pb-2">
                 <CardTitle class="text-sm font-medium">
-                  Total Revenue
+                  Total Sarana
                 </CardTitle>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -64,17 +64,17 @@ console.log(tab)
               </CardHeader>
               <CardContent>
                 <div class="text-2xl font-bold">
-                  $45,231.89
+                  10.000 item
                 </div>
                 <p class="text-xs text-muted-foreground">
-                  +20.1% from last month
+                  +1.1% dari bulan kemarin
                 </p>
               </CardContent>
             </Card>
             <Card>
               <CardHeader class="flex flex-row items-center justify-between space-y-0 pb-2">
                 <CardTitle class="text-sm font-medium">
-                  Subscriptions
+                  Total Ruangan
                 </CardTitle>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -93,17 +93,14 @@ console.log(tab)
               </CardHeader>
               <CardContent>
                 <div class="text-2xl font-bold">
-                  +2350
+                 1202
                 </div>
-                <p class="text-xs text-muted-foreground">
-                  +180.1% from last month
-                </p>
               </CardContent>
             </Card>
             <Card>
               <CardHeader class="flex flex-row items-center justify-between space-y-0 pb-2">
                 <CardTitle class="text-sm font-medium">
-                  Sales
+                  Total Gedung
                 </CardTitle>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -121,17 +118,14 @@ console.log(tab)
               </CardHeader>
               <CardContent>
                 <div class="text-2xl font-bold">
-                  +12,234
+                  12
                 </div>
-                <p class="text-xs text-muted-foreground">
-                  +19% from last month
-                </p>
               </CardContent>
             </Card>
             <Card>
               <CardHeader class="flex flex-row items-center justify-between space-y-0 pb-2">
                 <CardTitle class="text-sm font-medium">
-                  Active Now
+                  User Aktif
                 </CardTitle>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -148,10 +142,10 @@ console.log(tab)
               </CardHeader>
               <CardContent>
                 <div class="text-2xl font-bold">
-                  +573
+                  30
                 </div>
                 <p class="text-xs text-muted-foreground">
-                  +201 since last hour
+                  +2 dari bulan lalu
                 </p>
               </CardContent>
             </Card>
