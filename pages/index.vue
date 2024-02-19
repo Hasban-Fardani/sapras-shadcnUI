@@ -27,7 +27,20 @@
                 </Button>
             </NuxtLink>
         </div>
-        <div>
+        <div class="flex items-center gap-1">
+            <DropdownMenu>
+                <DropdownMenuTrigger class="md:hidden">
+                    <Icon name="material-symbols:menu-rounded"/>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent class="">
+                    <DropdownMenuLabel>My Account</DropdownMenuLabel>
+                    <DropdownMenuSeparator />
+                    <DropdownMenuItem>Profile</DropdownMenuItem>
+                    <DropdownMenuItem>Billing</DropdownMenuItem>
+                    <DropdownMenuItem>Team</DropdownMenuItem>
+                    <DropdownMenuItem>Subscription</DropdownMenuItem>
+                </DropdownMenuContent>
+            </DropdownMenu>
             <NuxtLink to="/auth/register">
                 <Button variant="ghost">
                     Register
@@ -40,7 +53,7 @@
         <h1 class="text-center text-3xl font-bold leading-tight tracking-tighter lg:text-5xl lg:leading-[1.1]" data-aos="fade-up">
             Aplikas Manajemen<br>Sarana Prasarana Sekolah
         </h1>
-        <span class="text-center text-lg text-muted-foreground sm:text-xl max-w-[700px]" data-aos="fade-up">
+        <span class="text-center text-lg text-muted-foreground sm:text-xl max-w-[700px] px-10" data-aos="fade-up">
             Buatlah manajemen Sarana Prasarana di sekolah anda menjadi mudah dan efektif
         </span>
         <div class="flex gap-4 pt-4" data-aos="fade-up">

@@ -1,10 +1,33 @@
+<script setup>
+const colorMode = useColorMode()
+
+let isOpen = ref(false)
+let checked = ref(true)
+
+const toggleColorMode = () => {
+    checked.value = !checked.value
+    if (checked.value) {
+        colorMode.preference = "dark"
+    } else {
+        colorMode.preference = "light"
+    }
+    console.log(checked.value, colorMode.preference)
+}
+
+onMounted(() => {
+    const size = useWindowSize()
+    if (size.width.value > 768){
+        isOpen.value = true
+    }
+})
+</script>
 <template>
     <div class="flex bg-gray-100/40 dark:bg-gray-800/40">
-        <div class="hidden w-[250px] border-r bg-card shadow md:block">
+        <div class="w-[270px] border-r bg-card shadow md:block" v-show="isOpen">
             <NuxtLink to="#">
                 <Button variant="ghost" class="w-full flex justify-start gap-2 rounded-none py-8">
                     <NuxtImg src="/icon.svg" width="30" height="30" />
-                    <span class="font-medium">Admin Dashboard</span>
+                    <span class="font-medium">Sarpras</span>
                 </Button>
             </NuxtLink>
             <nav class="flex flex-col h-full">
@@ -77,7 +100,21 @@
             </nav>
         </div>
         <div class="flex-1 grid gap-4 p-4 md:gap-8 md:p-10">
-            <slot />
+            <div class="flex flex-col">
+                <div class="flex-1">
+                    <div class="flex w-full items-center justify-between">
+                        <Button variant="ghost" class="w-min" @click="isOpen = !isOpen">
+                            <Icon name="material-symbols:menu-rounded" />
+                        </Button>
+                        <div class="flex items-center space-x-2">
+                            <Label for="color-mode">Dark</Label>
+                            <Switch id="color-mode" @click="toggleColorMode"/>
+                            <Label for="color-mode">Light</Label>
+                        </div>
+                    </div>
+                    <slot />
+                </div>
+            </div>
         </div>
     </div>
 </template>
