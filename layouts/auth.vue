@@ -6,7 +6,7 @@
       <NuxtLink to="/" class="relative z-20 flex items-center text-lg font-medium">
         <NuxtImg src="/icon.svg" width="30" height="30"/>
         <p class="ml-1">
-          Sarpras Team
+          Sarpras
         </p>
       </NuxtLink>
       <div class="relative z-20 mt-auto">

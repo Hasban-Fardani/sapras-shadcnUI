@@ -11,7 +11,6 @@ const toggleColorMode = () => {
     } else {
         colorMode.preference = "light"
     }
-    console.log(checked.value, colorMode.preference)
 }
 
 onMounted(() => {
@@ -19,12 +18,14 @@ onMounted(() => {
     if (size.width.value > 768){
         isOpen.value = true
     }
+    console.log(colorMode.preference, colorMode.preference != 'dark')
 })
+
 </script>
 <template>
     <div class="flex bg-gray-100/40 dark:bg-gray-800/40">
         <div class="w-[270px] border-r bg-card shadow md:block" v-show="isOpen">
-            <NuxtLink to="#">
+            <NuxtLink to="/">
                 <Button variant="ghost" class="w-full flex justify-start gap-2 rounded-none py-8">
                     <NuxtImg src="/icon.svg" width="30" height="30" />
                     <span class="font-medium">Sarpras</span>
@@ -78,12 +79,6 @@ onMounted(() => {
                         Transaksi
                     </Button>
                 </NuxtLink>
-                <NuxtLink to="/">
-                    <Button variant="ghost" class="w-full flex justify-start gap-2 rounded-none">
-                        <Icon name="mdi:web"/>
-                        Web
-                    </Button>
-                </NuxtLink>
                 <NuxtLink to="/admin/setting">
                     <Button variant="ghost" class="w-full flex justify-start gap-2 rounded-none">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -107,9 +102,11 @@ onMounted(() => {
                             <Icon name="material-symbols:menu-rounded" />
                         </Button>
                         <div class="flex items-center space-x-2">
+                            <ClientOnly>
                             <Label for="color-mode">Dark</Label>
-                            <Switch id="color-mode" @click="toggleColorMode"/>
+                                <Switch id="color-mode" @update:checked="toggleColorMode()" :checked="colorMode.preference != 'dark'"/>
                             <Label for="color-mode">Light</Label>
+                            </ClientOnly>
                         </div>
                     </div>
                     <slot />

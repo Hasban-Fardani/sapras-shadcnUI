@@ -33,12 +33,18 @@
                     <Icon name="material-symbols:menu-rounded"/>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent class="">
-                    <DropdownMenuLabel>My Account</DropdownMenuLabel>
-                    <DropdownMenuSeparator />
-                    <DropdownMenuItem>Profile</DropdownMenuItem>
-                    <DropdownMenuItem>Billing</DropdownMenuItem>
-                    <DropdownMenuItem>Team</DropdownMenuItem>
-                    <DropdownMenuItem>Subscription</DropdownMenuItem>
+                    <NuxtLink to="#fitur">
+                        <DropdownMenuItem>Fitur</DropdownMenuItem>
+                    </NuxtLink>
+                    <NuxtLink to="#harga">
+                        <DropdownMenuItem>Harga</DropdownMenuItem>
+                    </NuxtLink>
+                    <NuxtLink to="#tentang">
+                        <DropdownMenuItem>Tentang</DropdownMenuItem>
+                    </NuxtLink>
+                    <NuxtLink to="#kontak">
+                        <DropdownMenuItem>Kontak</DropdownMenuItem>
+                    </NuxtLink>
                 </DropdownMenuContent>
             </DropdownMenu>
             <NuxtLink to="/auth/register">

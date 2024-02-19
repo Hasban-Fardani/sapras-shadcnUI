@@ -16,19 +16,19 @@ const tab = ref()
           <Button>Download</Button>
         </div>
       </div>
-      <Tabs default-value="overview" class="space-y-4" :ref="tab">
+      <Tabs default-value="overview" class="space-y-4 mt-4">
         <TabsList>
           <TabsTrigger value="overview">
             Overview
           </TabsTrigger>
-          <TabsTrigger value="analytics">
-            Analytics
+          <TabsTrigger value="sarana">
+            Sarana
           </TabsTrigger>
-          <TabsTrigger value="reports">
-            Reports
+          <TabsTrigger value="prasarana">
+            Prasarana
           </TabsTrigger>
-          <TabsTrigger value="notifications">
-            Notifications
+          <TabsTrigger value="akun">
+            Akun
           </TabsTrigger>
         </TabsList>
         <TabsContent value="overview" class="space-y-4">
@@ -150,19 +150,25 @@ const tab = ref()
             </Card>
             <Card class="col-span-3">
               <CardHeader>
-                <CardTitle>Recent Sales</CardTitle>
+                <CardTitle>Transaksi Terakhir</CardTitle>
                 <CardDescription>
-                  You made 265 sales this month.
+                  Terdapat 200 transaksi bulan ini.
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <RecentSales />
+                <RecentTransactions />
               </CardContent>
             </Card>
           </div>
         </TabsContent> 
-        <TabsContent value="analytics">
-          p analytics
+        <TabsContent value="sarana">
+          
+        </TabsContent>
+        <TabsContent value="prasarana">
+          
+        </TabsContent>
+        <TabsContent value="akun">
+          
         </TabsContent>
       </Tabs>
 </template>

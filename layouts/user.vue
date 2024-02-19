@@ -1,6 +1,6 @@
 <script setup>
-let checked = ref(true)
 const colorMode = useColorMode()
+let checked = ref(true)
 
 const toggleColorMode = () => {
     checked.value = !checked.value
@@ -9,8 +9,15 @@ const toggleColorMode = () => {
     } else {
         colorMode.preference = "light"
     }
-    console.log(checked.value, colorMode.preference)
 }
+
+onMounted(() => {
+    const size = useWindowSize()
+    if (size.width.value > 768){
+        isOpen.value = true
+    }
+    console.log(colorMode.preference, colorMode.preference != 'dark')
+})
 </script>
 <template>
     <!-- Header -->
@@ -32,29 +39,37 @@ const toggleColorMode = () => {
             </NuxtLink>
             <NuxtLink to="#tentang">
                 <Button variant="ghost">
-                    Form Peminjaman
+                    Form Transaksi
                 </Button>
             </NuxtLink>
         </div>
         <div>
+            <div class="hidden md:flex items-center space-x-2">
+                <ClientOnly>
+                <Label for="color-mode">Dark</Label>
+                    <Switch id="color-mode" @update:checked="toggleColorMode()" :checked="colorMode.preference != 'dark'"/>
+                <Label for="color-mode">Light</Label>
+                </ClientOnly>
+            </div>
             <DropdownMenu>
                 <DropdownMenuTrigger class="md:hidden">
                     <Icon name="material-symbols:menu-rounded" />
                 </DropdownMenuTrigger>
                 <DropdownMenuContent>
-                    <DropdownMenuLabel>My Account</DropdownMenuLabel>
-                    <DropdownMenuSeparator />
-                    <DropdownMenuItem>Profile</DropdownMenuItem>
-                    <DropdownMenuItem>Billing</DropdownMenuItem>
-                    <DropdownMenuItem>Team</DropdownMenuItem>
-                    <DropdownMenuItem>Subscription</DropdownMenuItem>
+                    <DropdownMenuItem>Dashboard</DropdownMenuItem>
+                    <DropdownMenuItem>Daftar Barang</DropdownMenuItem>
+                    <DropdownMenuItem>Form Trasaksi</DropdownMenuItem>
+                    <DropdownMenuItem>
+                        <div class="flex items-center space-x-2">
+                            <ClientOnly>
+                                <Label for="color-mode">Dark</Label>
+                                    <Switch id="color-mode" @update:checked="toggleColorMode()" :checked="colorMode.preference != 'dark'"/>
+                                <Label for="color-mode">Light</Label>
+                            </ClientOnly>
+                        </div>
+                    </DropdownMenuItem>
                 </DropdownMenuContent>
             </DropdownMenu>
-            <div class="flex items-center space-x-2">
-                <Label for="color-mode">Dark</Label>
-                <Switch id="color-mode" @click="toggleColorMode" />
-                <Label for="color-mode">Light</Label>
-            </div>
         </div>
     </header>
     <!-- End Header -->
