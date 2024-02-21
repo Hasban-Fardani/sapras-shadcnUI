@@ -58,7 +58,7 @@ onMounted(() => {
                 <DropdownMenuContent>
                     <DropdownMenuItem>Dashboard</DropdownMenuItem>
                     <DropdownMenuItem>Daftar Barang</DropdownMenuItem>
-                    <DropdownMenuItem>Form Trasaksi</DropdownMenuItem>
+                    <DropdownMenuItem>Form Pengajuan</DropdownMenuItem>
                     <DropdownMenuItem>
                         <div class="flex items-center space-x-2">
                             <ClientOnly>

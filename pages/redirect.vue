@@ -8,6 +8,9 @@
             <NuxtLink to="/user">
                 <Button>user</Button>
             </NuxtLink>
+            <NuxtLink to="/headmaster">
+                <Button>Kepala Sekolah</Button>
+            </NuxtLink>
         </div>    
     </div>
 </template>
