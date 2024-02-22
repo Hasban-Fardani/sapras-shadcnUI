@@ -1,91 +1,115 @@
 import { h } from 'vue'
-import { Checkbox } from '@/components/ui/checkbox'
+import { Button } from '@/components/ui/button'
 import type { ColumnDef } from '@tanstack/vue-table';
+import { ArrowUpDown, ChevronDown } from 'lucide-vue-next'
 import type { Item } from './data'
+import { log } from 'console';
 
 export const columns: ColumnDef<Item>[] = [
   {
-    id: 'id',
-    accessorKey: 'id',
-    header: 'ID',
+    id: 'code',
+    header: ({ column }) => {
+      return h(Button, {
+        variant: 'ghost',
+        onClick: () => column.toggleSorting(column.getIsSorted() === 'asc'),
+      }, () => ['Kode', h(ArrowUpDown, { class: 'ml-2 h-4 w-4' })])
+    },
+    accessorKey: 'code',
     enableSorting: true,
-    cell: ({ row }) => h('div', {}, row.getValue('id'))
+    cell: ({ row }) => h('div', {}, row.getValue('code'))
   },
   {
     id: 'name',
     accessorKey: 'name',
-    header: 'Name',
+    header: ({ column }) => {
+      return h(Button, {
+        variant: 'ghost',
+        onClick: () => column.toggleSorting(column.getIsSorted() === 'asc'),
+      }, () => ['Nama', h(ArrowUpDown, { class: 'ml-2 h-4 w-4' })])
+    },
     enableSorting: true,
     cell: ({ row }) => h('div', {}, row.getValue('name'))
   },
   {
     id: 'category',
     accessorKey: 'category',
-    header: 'Category',
+    header: ({ column }) => {
+      return h(Button, {
+        variant: 'ghost',
+        onClick: () => column.toggleSorting(column.getIsSorted() === 'asc'),
+      }, () => ['Kategori', h(ArrowUpDown, { class: 'ml-2 h-4 w-4' })])
+    },
     enableSorting: true,
     cell: ({ row }) => h('div', {}, row.getValue('category'))
   },
   {
+    id: 'merk',
+    header: ({ column }) => {
+      return h(Button, {
+        variant: 'ghost',
+        onClick: () => column.toggleSorting(column.getIsSorted() === 'asc'),
+      }, () => ['Merk', h(ArrowUpDown, { class: 'ml-2 h-4 w-4' })])
+    },
+    accessorKey: 'merk',
+    enableSorting: true,
+    cell: ({ row }) => h('div', {}, row.getValue('merk'))
+  },
+  {
     id: 'supplier',
-    header: 'Supplier',
+    header: ({ column }) => {
+      return h(Button, {
+        variant: 'ghost',
+        onClick: () => column.toggleSorting(column.getIsSorted() === 'asc'),
+      }, () => ['Supplier', h(ArrowUpDown, { class: 'ml-2 h-4 w-4' })])
+    },
     accessorKey: 'supplier',
     enableSorting: true,
     cell: ({ row }) => h('div', {}, row.getValue('supplier'))
   },
   {
     id: 'unit',
-    header: 'Unit',
+    header: ({ column }) => {
+      return h(Button, {
+        variant: 'ghost',
+        onClick: () => column.toggleSorting(column.getIsSorted() === 'asc'),
+      }, () => ['Satuan', h(ArrowUpDown, { class: 'ml-2 h-4 w-4' })])
+    },
     accessorKey: 'unit',
     enableSorting: true,
     cell: ({ row }) => h('div', {}, row.getValue('unit'))
   },
   {
     id: 'funding_source',
-    header: 'Funding Source',
+    header: ({ column }) => {
+      return h(Button, {
+        variant: 'ghost',
+        onClick: () => column.toggleSorting(column.getIsSorted() === 'asc'),
+      }, () => ['Dana', h(ArrowUpDown, { class: 'ml-2 h-4 w-4' })])
+    },
     accessorKey: 'funding_source',
     enableSorting: true,
     cell: ({ row }) => h('div', {}, row.getValue('funding_source'))
   },
   {
-    id: 'code',
-    header: 'Code',
-    accessorKey: 'code',
-    enableSorting: true,
-    cell: ({ row }) => h('div', {}, row.getValue('code'))
-  },
-  {
-    id: 'merk',
-    header: 'Merk',
-    accessorKey: 'merk',
-    enableSorting: true,
-    cell: ({ row }) => h('div', {}, row.getValue('merk'))
-  },
-  {
     id: 'stok',
-    header: 'Stok',
+    header: ({ column }) => {
+      return h(Button, {
+        variant: 'ghost',
+        onClick: () => column.toggleSorting(column.getIsSorted() === 'asc'),
+      }, () => ['Stok', h(ArrowUpDown, { class: 'ml-2 h-4 w-4' })])
+    },
     accessorKey: 'stok',
     enableSorting: true,
     cell: ({ row }) => h('div', {}, row.getValue('stok'))
   },
   {
-    id: 'min_stok',
-    header: 'Min Stok',
-    accessorKey: 'min_stok',
-    enableSorting: true,
-    cell: ({ row }) => h('div', {}, row.getValue('min_stok'))
+    id: 'detail',
+    cell: ({ row }) => h(Button, {
+      variant: 'outline',
+      size: 'sm',
+      onClick: () => navigateTo('/admin/items/' + row.original.id),
+    }, 'detail'),
+    enableSorting: false,
+    enableHiding: false,
   },
-  {
-    id: 'count',
-    header: 'Count',
-    accessorKey: 'count',
-    enableSorting: true,
-    cell: ({ row }) => h('div', {}, row.getValue('count'))
-  },
-  {
-    id: 'type',
-    header: 'Type',
-    accessorKey: 'type',
-    enableSorting: true,
-    cell: ({ row }) => h('div', {}, row.getValue('type'))
-  }
 ]

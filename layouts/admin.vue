@@ -15,7 +15,7 @@ const toggleColorMode = () => {
 
 onMounted(() => {
     const size = useWindowSize()
-    if (size.width.value > 768){
+    if (size.width.value > 768) {
         isOpen.value = true
     }
     console.log(colorMode.preference, colorMode.preference != 'dark')
@@ -34,7 +34,7 @@ onMounted(() => {
             <nav class="flex flex-col h-full">
                 <NuxtLink to="/admin">
                     <Button variant="ghost" class="w-full flex justify-start gap-2 rounded-none">
-                        <Icon name="material-symbols-light:dashboard"/>
+                        <Icon name="material-symbols-light:dashboard" />
                         Dashboard
                     </Button>
                 </NuxtLink>
@@ -51,6 +51,17 @@ onMounted(() => {
                             <path d="M12 22V12"></path>
                         </svg>
                         Barang
+                    </Button>
+                </NuxtLink>
+                <NuxtLink to="/admin/rooms">
+                    <Button variant="ghost" class="w-full flex justify-start gap-2 rounded-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-door-open" viewBox="0 0 16 16">
+                            <path d="M8.5 10c-.276 0-.5-.448-.5-1s.224-1 .5-1 .5.448.5 1-.224 1-.5 1" />
+                            <path
+                                d="M10.828.122A.5.5 0 0 1 11 .5V1h.5A1.5 1.5 0 0 1 13 2.5V15h1.5a.5.5 0 0 1 0 1h-13a.5.5 0 0 1 0-1H3V1.5a.5.5 0 0 1 .43-.495l7-1a.5.5 0 0 1 .398.117M11.5 2H11v13h1V2.5a.5.5 0 0 0-.5-.5M4 1.934V15h6V1.077z" />
+                        </svg>
+                        Ruangan
                     </Button>
                 </NuxtLink>
                 <NuxtLink to="/admin/users">
@@ -103,9 +114,10 @@ onMounted(() => {
                         </Button>
                         <div class="flex items-center space-x-2">
                             <ClientOnly>
-                            <Label for="color-mode">Dark</Label>
-                                <Switch id="color-mode" @update:checked="toggleColorMode()" :checked="colorMode.preference != 'dark'"/>
-                            <Label for="color-mode">Light</Label>
+                                <Label for="color-mode">Dark</Label>
+                                <Switch id="color-mode" @update:checked="toggleColorMode()"
+                                    :checked="colorMode.preference != 'dark'" />
+                                <Label for="color-mode">Light</Label>
                             </ClientOnly>
                         </div>
                     </div>
@@ -113,5 +125,4 @@ onMounted(() => {
                 </div>
             </div>
         </div>
-    </div>
-</template>
+</div></template>

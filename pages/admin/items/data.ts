@@ -12,7 +12,6 @@ export interface Item {
   merk: string;
   stok: number;
   min_stok: number;
-  count: number;
   type: 'alat/bahan' | 'asset';
 }
 
@@ -28,7 +27,6 @@ export const items: Item[] = [
       merk: "Faber-Castell",
       stok: 50,
       min_stok: 10,
-      count: 1,
       type: "alat/bahan"
     },
     {
@@ -42,7 +40,6 @@ export const items: Item[] = [
       merk: "Sinar Dunia",
       stok: 100,
       min_stok: 20,
-      count: 2,
       type: "alat/bahan"
     },
     {
@@ -56,7 +53,6 @@ export const items: Item[] = [
       merk: "IKEA",
       stok: 10,
       min_stok: 5,
-      count: 1,
       type: "asset"
     },
     {
@@ -70,7 +66,6 @@ export const items: Item[] = [
       merk: "HP",
       stok: 20,
       min_stok: 5,
-      count: 1,
       type: "asset"
     },
     {
@@ -84,7 +79,6 @@ export const items: Item[] = [
       merk: "Gramedia",
       stok: 30,
       min_stok: 10,
-      count: 1,
       type: "alat/bahan"
     },
     {
@@ -98,7 +92,6 @@ export const items: Item[] = [
       merk: "Logitech",
       stok: 15,
       min_stok: 5,
-      count: 1,
       type: "asset"
     },
     {
@@ -112,7 +105,6 @@ export const items: Item[] = [
       merk: "Razer",
       stok: 25,
       min_stok: 5,
-      count: 1,
       type: "asset"
     },
     {
@@ -126,7 +118,6 @@ export const items: Item[] = [
       merk: "IKEA",
       stok: 10,
       min_stok: 3,
-      count: 1,
       type: "asset"
     },
     {
@@ -140,7 +131,6 @@ export const items: Item[] = [
       merk: "Dell",
       stok: 10,
       min_stok: 2,
-      count: 1,
       type: "asset"
     },
     {
@@ -154,7 +144,6 @@ export const items: Item[] = [
       merk: "PaperOne",
       stok: 40,
       min_stok: 10,
-      count: 1,
       type: "alat/bahan"
     }
   ];
