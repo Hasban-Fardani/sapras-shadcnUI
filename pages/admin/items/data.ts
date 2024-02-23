@@ -1,6 +1,3 @@
-import { v4 as uuidv4 } from 'uuid';
-
-
 export interface Item {
   id: string;
   name: string;
@@ -71,7 +68,7 @@ export const items: Item[] = [
     {
       id: "5",
       name: "Buku Panduan",
-      category: "Referensi",
+      category: "Buku",
       supplier: "Toko Buku Maju",
       unit: "Buah",
       funding_source: "BOS",

@@ -17,7 +17,7 @@ import {
   useVueTable,
 } from '@tanstack/vue-table'
 import { cn, valueUpdater } from '@/lib/utils'
-import {accounts as data} from './data'
+import {transactions as data} from './data'
 import { columns } from './column'
 
 const sorting = ref<SortingState>([])
@@ -47,7 +47,7 @@ const table = useVueTable({
 </script>
 <template>
   <div class="w-full">
-    <div class="flex flex-wrap gap-2 items-center py-4">
+    <div class="flex gap-2 items-center py-4">
       <Input
         class="max-w-sm"
         placeholder="Filter name..."

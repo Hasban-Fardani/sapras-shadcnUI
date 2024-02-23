@@ -40,7 +40,10 @@ export const columns: ColumnDef<Item>[] = [
       }, () => ['Kategori', h(ArrowUpDown, { class: 'ml-2 h-4 w-4' })])
     },
     enableSorting: true,
-    cell: ({ row }) => h('div', {}, row.getValue('category'))
+    cell: ({ row }) => h('div', {}, row.getValue('category')),
+    filterFn: (row, id, value) => {
+      return value.includes(row.getValue(id))
+    },
   },
   {
     id: 'merk',
@@ -88,7 +91,10 @@ export const columns: ColumnDef<Item>[] = [
     },
     accessorKey: 'funding_source',
     enableSorting: true,
-    cell: ({ row }) => h('div', {}, row.getValue('funding_source'))
+    cell: ({ row }) => h('div', {}, row.getValue('funding_source')),
+    filterFn: (row, id, value) => {
+      return value.includes(row.getValue(id))
+    },
   },
   {
     id: 'stok',
