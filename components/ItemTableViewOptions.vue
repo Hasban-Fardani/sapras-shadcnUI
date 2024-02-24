@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { Table } from '@tanstack/vue-table'
 import { computed } from 'vue'
-import type { Item } from '../pages/admin/items/data'
+import type { Item } from '@/types/item'
 import {MixerHorizontalIcon} from '@radix-icons/vue'
 
 import { Button } from './ui/button'

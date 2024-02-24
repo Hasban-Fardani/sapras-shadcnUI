@@ -1,40 +1,117 @@
 <script setup>
 definePageMeta({
-    layout: 'admin'
+  layout: 'admin'
 })
 
 import { useForm } from 'vee-validate'
 import { toTypedSchema } from '@vee-validate/zod'
 import * as z from 'zod'
+// import { toast } from '@/components/ui/toast'
 
 const formSchema = toTypedSchema(z.object({
-  username: z.string().min(2).max(50),
+  name: z.string().min(2).max(50),
+  category: z.string(),
+  supplier: z.string(),
+  unit: z.string(),
+  funding_resource: z.enum(['BOS', 'APB']),
+  merk: z.string(),
+  stok: z.number(),
+  min_stok: z.number(),
+  // type: z.enum(['alat/bahan', 'asset'])
 }))
 
-const form = useForm({
+const { handleSubmit, handleReset } = useForm({
   validationSchema: formSchema,
 })
 
-const onSubmit = () => {
-    console.log('horee');
-}
+const onSubmit = handleSubmit((v) => {
+  console.log(v)
+})
 </script>
 <template>
-    <form @submit="onSubmit">
-    <FormField v-slot="{ componentField }" name="username">
+  <form @submit="onSubmit" class="flex flex-col gap-3">
+      <FormField v-slot="{ componentField }" name="name">
+        <FormItem>
+          <FormLabel>Nama</FormLabel>
+          <FormControl>
+            <Input type="text" placeholder="Spidol" v-bind="componentField"/>
+          </FormControl>
+          <FormMessage />
+        </FormItem>
+      </FormField>
+      <FormField v-slot="{ componentField }" name="category">
+        <FormItem>
+          <FormLabel>Kategori</FormLabel>
+          <FormControl>
+            <Input type="text" placeholder="ATK" v-bind="componentField" />
+          </FormControl>
+          <FormMessage />
+        </FormItem>
+      </FormField>
+    <FormField v-slot="{ componentField }" name="supplier">
       <FormItem>
-        <FormLabel>Username</FormLabel>
+        <FormLabel>Suplier</FormLabel>
         <FormControl>
-          <Input type="text" placeholder="shadcn" v-bind="componentField" />
+          <Input type="text" placeholder="Toko Sejahtera" v-bind="componentField" />
         </FormControl>
-        <FormDescription>
-          This is your public display name.
-        </FormDescription>
         <FormMessage />
       </FormItem>
     </FormField>
-    <Button type="submit">
+    <FormField v-slot="{ componentField }" name="unit">
+      <FormItem>
+        <FormLabel>Satuan</FormLabel>
+        <FormControl>
+          <Input type="text" placeholder="unit, rim, lusin" v-bind="componentField" />
+        </FormControl>
+        <FormMessage />
+      </FormItem>
+    </FormField>
+    <FormField v-slot="{ componentField }" name="funding_resource">
+      <FormItem>
+        <FormLabel>Sumber Dana</FormLabel>
+        <FormControl>
+          <Input type="text" placeholder="BOS, APB" v-bind="componentField"/>
+        </FormControl>
+        <FormMessage />
+      </FormItem>
+    </FormField>
+    <FormField v-slot="{ componentField }" name="merk">
+      <FormItem>
+        <FormLabel>Merk</FormLabel>
+        <FormControl>
+          <Input type="text" placeholder="Sinar Dunia" v-bind="componentField"/>
+        </FormControl>
+        <FormMessage />
+      </FormItem>
+    </FormField>
+    <FormField v-slot="{ componentField }" name="stok">
+      <FormItem>
+        <FormLabel>Stok</FormLabel>
+        <FormControl>
+          <Input type="number" placeholder="200" v-bind="componentField" min="0"/>
+        </FormControl>
+        <FormMessage />
+      </FormItem>
+    </FormField>
+    <FormField v-slot="{ componentField }" name="min_stok">
+      <FormItem>
+        <FormLabel>Stok Minimum</FormLabel>
+        <FormControl>
+          <Input type="number" placeholder="200" v-bind="componentField" min="0"/>
+        </FormControl>
+        <FormMessage />
+      </FormItem>
+    </FormField>
+    <Button type="submit" class="w-fit">
       Submit
     </Button>
   </form>
 </template>
+<style scoped>
+form {
+  @apply grid grid-cols-1 lg:grid-cols-2;
+}
+input {
+  @apply min-w-[200px] w-full;
+}
+</style>

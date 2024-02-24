@@ -4,7 +4,7 @@ export interface Transaction {
   user: string;
   date: string;
   type: 'pengadaan' | 'pengajuan';
-  status: 'disetujui' | 'pending' | 'ditolak', 'selesai';
+  status: 'disetujui' | 'pending' | 'ditolak' | 'selesai';
 }
 
 export const transactions: Transaction[] = [

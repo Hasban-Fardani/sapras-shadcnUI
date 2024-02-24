@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { type Table } from '@tanstack/vue-table'
-import type { Item } from '../pages/admin/items/data'
+import type { Item } from '@/types/item'
 import {ChevronLeftIcon} from '@radix-icons/vue'
 import {ChevronRightIcon} from '@radix-icons/vue'
 import {DoubleArrowLeftIcon} from '@radix-icons/vue'

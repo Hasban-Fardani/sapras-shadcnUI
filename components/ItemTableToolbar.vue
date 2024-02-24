@@ -24,9 +24,9 @@ const isFiltered = computed(() => props.table.getState().columnFilters.length > 
     <div class="flex flex-1 items-center space-x-2">
       <Input
         placeholder="Filter Items..."
-        :model-value="(table.getColumn('title')?.getFilterValue() as string) ?? ''"
+        :model-value="(table.getColumn('name')?.getFilterValue() as string) ?? ''"
         class="h-8 w-[150px] lg:w-[250px]"
-        @input="table.getColumn('title')?.setFilterValue($event.target.value)"
+        @input="table.getColumn('name')?.setFilterValue($event.target.value)"
       />
       <ItemTableFacetedFilter
         v-if="table.getColumn('category')"
@@ -37,7 +37,7 @@ const isFiltered = computed(() => props.table.getState().columnFilters.length > 
       <ItemTableFacetedFilter
         v-if="table.getColumn('funding_source')"
         :column="table.getColumn('funding_source')"
-        title="Funding Source"
+        title="Sumber Dana"
         :options="fundingSource"
       />
 
@@ -53,9 +53,12 @@ const isFiltered = computed(() => props.table.getState().columnFilters.length > 
     </div>
     <div class="flex items-center gap-2">
       <NuxtLink to="/admin/items/add">
-        <Button class="flex items-center gap-1 " size="sm" variant="outline">
-          <Icon name="material-symbols:add-circle-outline"/>
-          <span>Tambah</span>
+        <Button 
+        variant="outline"
+        size="sm"
+        class="ml-auto hidden h-8 lg:flex">
+          <Icon name="material-symbols:add-circle-outline" class="mr-2 h-4 w-4" />
+          Tambah
         </Button>
       </NuxtLink>
       <ItemTableViewOptions :table="table" />

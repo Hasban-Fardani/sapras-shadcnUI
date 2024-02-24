@@ -3,7 +3,6 @@ import { Button } from '@/components/ui/button'
 import type { ColumnDef } from '@tanstack/vue-table';
 import { ArrowUpDown, ChevronDown } from 'lucide-vue-next'
 import type { Item } from './data'
-import { log } from 'console';
 
 export const columns: ColumnDef<Item>[] = [
   {
@@ -119,3 +118,8 @@ export const columns: ColumnDef<Item>[] = [
     enableHiding: false,
   },
 ]
+
+/**
+  '(list: { label: string; value: string; icon?: Component | undefined; }[], term: string) => { label: string; value: string; icon?: Component | undefined; }[]' 
+  '(val: string[] | number[] | false[] | true[] | Record<string, any>[], term: string) => string[] | number[] | false[] | true[] | Record<string, any>[]'.
+ */

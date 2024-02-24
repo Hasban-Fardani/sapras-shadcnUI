@@ -2,38 +2,38 @@
 const semua_transaksi = [
   {
     id: "T01",
-    nama: "Bu Hima",
-    avatar_fallback: "HM",
+    nama: "Unit BK",
+    avatar_fallback: "BK",
     barang: "Spidol",
-    jumlah: 1
+    jumlah: 50
   },
   {
     id: "T02",
-    nama: "Bu Pemi",
-    avatar_fallback: "P",
-    barang: "Kapur",
-    jumlah: 10
+    nama: "Unit Sarpras",
+    avatar_fallback: "SP",
+    barang: "Pulpen",
+    jumlah: 40
   },
   {
     id: "T03",
-    nama: "Pak Engkus",
-    avatar_fallback: "EK",
+    nama: "Unit IT",
+    avatar_fallback: "IT",
     barang: "Penghapus",
-    jumlah: 1
+    jumlah: 10
   },
   {
     id: "T04",
-    nama: "Bu Mudhita",
-    avatar_fallback: "M",
-    barang: "Kertas",
-    jumlah: 24
+    nama: "Unit PJOK",
+    avatar_fallback: "PJ",
+    barang: "Kapur",
+    jumlah: 12
   },
   {
     id: "T05",
-    nama: "Bu Neneng",
+    nama: "Unit DKV",
     avatar_fallback: "N",
-    barang: "Spidol",
-    jumlah: 1
+    barang: "Kertas",
+    jumlah: 100
   },
   
 ]
