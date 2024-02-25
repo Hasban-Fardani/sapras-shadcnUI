@@ -1,26 +1,27 @@
 <script setup lang="ts">
-import { VisAxis, VisStackedBar, VisXYContainer } from '@unovis/vue'
+import { VisAxis, VisLine, VisStackedBar, VisXYContainer } from '@unovis/vue'
 
 type Data = typeof data[number]
 const data = [
-  { name: 'Jan', total: Math.floor(Math.random() * 10) + 20 },
-  { name: 'Feb', total: Math.floor(Math.random() * 10) + 20 },
-  { name: 'Mar', total: Math.floor(Math.random() * 10) + 20 },
-  { name: 'Apr', total: Math.floor(Math.random() * 10) + 20 },
-  { name: 'May', total: Math.floor(Math.random() * 10) + 20 },
-  { name: 'Jun', total: Math.floor(Math.random() * 10) + 20 },
-  { name: 'Jul', total: Math.floor(Math.random() * 10) + 20 },
-  { name: 'Aug', total: Math.floor(Math.random() * 10) + 20 },
-  { name: 'Sep', total: Math.floor(Math.random() * 10) + 20 },
-  { name: 'Oct', total: Math.floor(Math.random() * 10) + 20 },
-  { name: 'Nov', total: Math.floor(Math.random() * 10) + 20 },
-  { name: 'Dec', total: Math.floor(Math.random() * 10) + 20 },
+  { name: 'Jan', total: 13 },
+  { name: 'Feb', total: 15 },
+  { name: 'Mar', total: 14 },
+  { name: 'Apr', total: 13 },
+  { name: 'May', total: 17 },
+  { name: 'Jun', total: 16 },
+  { name: 'Jul', total: 14 },
+  { name: 'Aug', total: 13 },
+  { name: 'Sep', total: 14 },
+  { name: 'Oct', total: 15 },
+  { name: 'Nov', total: 12 },
+  { name: 'Dec', total: 14 },
 ]
+
 </script>
 
 <template>
   <VisXYContainer height="350px" :margin="{ left: 20, right: 20 }" :data="data">
-    <VisStackedBar
+    <VisLine
       :x="(d: Data, i: number) => i"
       :y="(d: Data) => d.total"
       color="#41b883"

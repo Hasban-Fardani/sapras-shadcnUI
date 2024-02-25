@@ -1,6 +1,6 @@
 <template>
     <!-- Header -->
-    <header class="container flex justify-between h-14 max-w-screen-2xl items-center fixed" data-aos="fade-in">
+    <header class="container flex justify-between h-14 max-w-screen-2xl items-center fixed z-10 border-b" data-aos="fade-in">
         <NuxtLink to="/" class="flex gap-2 items-center">
             <NuxtImg src="/icon.svg" alt="icon sarpras" width="30" height="30"/>
             <span class="text-lg font-semibold">Sarpras</span>
@@ -55,28 +55,31 @@
         </div>
     </header>
     <!-- Hero Section -->
-    <section class="mx-auto min-h-[91vh] flex-1 flex flex-col gap-2 justify-center items-center">
-        <h1 class="text-center text-3xl font-bold leading-tight tracking-tighter lg:text-5xl lg:leading-[1.1]" data-aos="fade-up">
-            Aplikas Manajemen<br>Sarana Prasarana Sekolah
-        </h1>
-        <span class="text-center text-lg text-muted-foreground sm:text-xl max-w-[700px] px-10" data-aos="fade-up">
-            Buatlah manajemen Sarana Prasarana di sekolah anda menjadi mudah dan efektif
-        </span>
-        <div class="flex gap-4 pt-4" data-aos="fade-up">
-            <NuxtLink to="/redirect">
-                <Button>
-                    Buka Aplikasi
-                </Button>
-            </NuxtLink>
-            <NuxtLink to="#fitur">
-                <Button variant="outline">
-                    Daftar Fitur
-                </Button>
-            </NuxtLink>
+    <section class="mx-auto flex flex-col gap-16 justify-center items-center pt-28 pb-10">
+        <div class="flex flex-col gap-2 justify-center items-center">
+            <h1 class="text-center text-3xl font-bold leading-tight tracking-tighter lg:text-5xl lg:leading-[1.1]" data-aos="fade-up">
+                Aplikas Manajemen<br>Sarana Prasarana Sekolah
+            </h1>
+            <span class="text-center text-lg text-muted-foreground sm:text-xl max-w-[700px] px-10" data-aos="fade-up">
+                Buatlah manajemen Sarana Prasarana di sekolah anda menjadi mudah dan efektif
+            </span>
+            <div class="flex gap-4 pt-4" data-aos="fade-up">
+                <NuxtLink to="/redirect">
+                    <Button>
+                        Buka Aplikasi
+                    </Button>
+                </NuxtLink>
+                <NuxtLink to="#fitur">
+                    <Button variant="outline">
+                        Daftar Fitur
+                    </Button>
+                </NuxtLink>
+            </div>
         </div>
+        <NuxtImg src="/images/dashboard.png" width="1000px" class="drop-shadow-xl shadow-gray-100"/>
     </section>
     <!-- Fitur -->
-    <section class="mx-auto min-h-[500px] flex flex-col gap-2 justify-center items-center" id="fitur">
+    <section class="mx-auto flex flex-col gap-2 justify-center items-center py-10" id="fitur">
         <h2 class="text-2xl lg:text-4xl font-bold lg:tracking-tight" data-aos="fade-up">
             Daftar Fitur 
         </h2>
@@ -135,14 +138,14 @@
         </div>
     </section>
     <!-- Harga -->
-    <section class="mx-auto min-h-[500px] flex flex-col gap-2 justify-center items-center" id="harga">
+    <section class="mx-auto flex flex-col gap-2 justify-center items-center py-10" id="harga">
         <h2 class="text-2xl lg:text-4xl font-bold lg:tracking-tight" data-aos="fade-up">
             Daftar Harga
         </h2>
-        <span class="text-center text-lg text-muted-foreground sm:text-xl" data-aos="fade-up">
+        <span class="text-center text-lg text-wrap text-muted-foreground sm:text-xl px-10" data-aos="fade-up">
             Harga terjangkau dan bayar sesuai kebutuhan saja
         </span>
-        <div class="mt-8 container flex gap-8">
+        <div class="mt-8 container justify-center items-center gap-8">
             <Card data-aos="fade-up">
                 <CardHeader class="font-semibold text-xl">
                     Basic
@@ -179,18 +182,18 @@
         </div>
     </section>
     <!-- Tentang -->
-    <section class="mx-auto min-h-[500px] flex flex-col gap-2 justify-center items-center" id="tentang">
+    <section class="mx-auto flex flex-col gap-2 justify-center items-center py-10" id="tentang">
         <h2 class="text-2xl lg:text-4xl font-bold lg:tracking-tight" data-aos="fade-up">
             Tentang
         </h2>
         <span class="text-center text-lg text-muted-foreground sm:text-xl" data-aos="fade-up">
         </span>
-        <p class="mt-8 container text-center" data-aos="fade-up">
+        <p class="container text-center" data-aos="fade-up">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates facere pariatur dolorem libero necessitatibus animi earum, ex numquam reiciendis voluptatum sit laborum error! Sed cum facilis corporis libero impedit minima.
         </p>
     </section>
     <!-- Kontak -->
-    <section class="mx-auto min-h-[500px] flex flex-col gap-2 justify-center items-center" id="kontak">
+    <section class="mx-auto flex flex-col gap-2 justify-center items-center py-10" id="kontak">
         <h2 class="text-2xl lg:text-4xl font-bold lg:tracking-tight" data-aos="fade-up">
             Kontak Kami
         </h2>

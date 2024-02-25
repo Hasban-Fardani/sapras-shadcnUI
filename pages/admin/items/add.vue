@@ -6,7 +6,6 @@ definePageMeta({
 import { useForm } from 'vee-validate'
 import { toTypedSchema } from '@vee-validate/zod'
 import * as z from 'zod'
-// import { toast } from '@/components/ui/toast'
 
 const formSchema = toTypedSchema(z.object({
   name: z.string().min(2).max(50),
@@ -17,7 +16,6 @@ const formSchema = toTypedSchema(z.object({
   merk: z.string(),
   stok: z.number(),
   min_stok: z.number(),
-  // type: z.enum(['alat/bahan', 'asset'])
 }))
 
 const { handleSubmit, handleReset } = useForm({

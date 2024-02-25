@@ -27,28 +27,28 @@ onMounted(() => {
             <span class="text-lg font-semibold">Sarpras</span>
         </NuxtLink>
         <div class="hidden md:flex gap-4">
-            <NuxtLink to="#fitur">
+            <NuxtLink to="/user">
                 <Button variant="ghost">
-                    Dashboard
+                    Home
                 </Button>
             </NuxtLink>
-            <NuxtLink to="#harga">
+            <NuxtLink to="/user/items">
                 <Button variant="ghost">
-                    Daftar Barang
+                    Barang
                 </Button>
             </NuxtLink>
-            <NuxtLink to="#tentang">
+            <NuxtLink to="/user/forms">
                 <Button variant="ghost">
-                    Form Transaksi
+                    Pengajuan
                 </Button>
             </NuxtLink>
         </div>
         <div>
             <div class="hidden md:flex items-center space-x-2">
                 <ClientOnly>
-                <Label for="color-mode">Dark</Label>
-                    <Switch id="color-mode" @update:checked="toggleColorMode()" :checked="colorMode.preference != 'dark'"/>
-                <Label for="color-mode">Light</Label>
+                    <Label for="color-mode">Dark</Label>
+                        <Switch id="color-mode" @update:checked="toggleColorMode()" :checked="colorMode.preference != 'dark'"/>
+                    <Label for="color-mode">Light</Label>
                 </ClientOnly>
             </div>
             <DropdownMenu>
@@ -56,9 +56,15 @@ onMounted(() => {
                     <Icon name="material-symbols:menu-rounded" />
                 </DropdownMenuTrigger>
                 <DropdownMenuContent>
-                    <DropdownMenuItem>Dashboard</DropdownMenuItem>
-                    <DropdownMenuItem>Daftar Barang</DropdownMenuItem>
-                    <DropdownMenuItem>Form Pengajuan</DropdownMenuItem>
+                    <NuxtLink to="/user">
+                        <DropdownMenuItem>Home</DropdownMenuItem>
+                    </NuxtLink>
+                    <NuxtLink to="/user/items">
+                        <DropdownMenuItem>Barang</DropdownMenuItem>
+                    </NuxtLink>
+                    <NuxtLink to="/user/forms">
+                        <DropdownMenuItem>Pengajuan</DropdownMenuItem>
+                    </NuxtLink>
                     <DropdownMenuItem>
                         <div class="flex items-center space-x-2">
                             <ClientOnly>
@@ -73,5 +79,7 @@ onMounted(() => {
         </div>
     </header>
     <!-- End Header -->
-    <slot />
+    <div class="px-4 pt-20">
+        <slot />
+    </div>
 </template>
