@@ -1,6 +1,7 @@
 <script setup>
 const colorMode = useColorMode()
 let checked = ref(true)
+let isOpen = ref(false)
 
 const toggleColorMode = () => {
     checked.value = !checked.value
@@ -21,7 +22,7 @@ onMounted(() => {
 </script>
 <template>
     <!-- Header -->
-    <header class="container flex justify-between h-14 max-w-screen-2xl items-center fixed" data-aos="fade-in">
+    <header class="container flex justify-between h-14 max-w-screen-2xl items-center fixed backdrop-blur-md z-10" data-aos="fade-in">
         <NuxtLink to="/" class="flex gap-2 items-center">
             <NuxtImg src="/icon.svg" alt="icon sarpras" width="30" height="30" />
             <span class="text-lg font-semibold">Sarpras</span>

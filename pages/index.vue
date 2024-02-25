@@ -1,6 +1,6 @@
 <template>
     <!-- Header -->
-    <header class="container flex justify-between h-14 max-w-screen-2xl items-center fixed z-10 border-b" data-aos="fade-in">
+    <header class="container flex justify-between h-14 max-w-screen-2xl items-center fixed z-10 border-b backdrop-blur-md" data-aos="fade-in">
         <NuxtLink to="/" class="flex gap-2 items-center">
             <NuxtImg src="/icon.svg" alt="icon sarpras" width="30" height="30"/>
             <span class="text-lg font-semibold">Sarpras</span>
@@ -76,7 +76,7 @@
                 </NuxtLink>
             </div>
         </div>
-        <NuxtImg src="/images/dashboard.png" width="1000px" class="drop-shadow-xl shadow-gray-100"/>
+        <NuxtImg src="/images/dashboard.png" width="950px" class="drop-shadow-xl shadow-gray-100"/>
     </section>
     <!-- Fitur -->
     <section class="mx-auto flex flex-col gap-2 justify-center items-center py-10" id="fitur">
@@ -145,38 +145,75 @@
         <span class="text-center text-lg text-wrap text-muted-foreground sm:text-xl px-10" data-aos="fade-up">
             Harga terjangkau dan bayar sesuai kebutuhan saja
         </span>
-        <div class="mt-8 container justify-center items-center gap-8">
-            <Card data-aos="fade-up">
-                <CardHeader class="font-semibold text-xl">
-                    Basic
+        <div class="mt-8 container flex flex-wrap justify-center items-center gap-8">
+            <Card class="w-[300px] h-[350px] text-center flex flex-col" data-aos="fade-up">
+                <CardHeader class="">
+                    <h2 class="font-semibold text-xl">
+                        Reguler
+                    </h2>
                 </CardHeader>
-                <CardContent>
-
+                <CardContent class="text-center px-10 flex-grow flex justify-center items-center">
+                    <ul class="flex-grow flex flex-col justify-center gap-2">
+                        <li>Dashboard</li>
+                        <li>Kelola Barang</li>
+                        <li>Kelola Akun</li>
+                        <li>Kelola Pengajuan</li>
+                    </ul>
                 </CardContent>
-                <CardFooter>
-                    <NuxtLink to="#">Pesan</NuxtLink>
+                <CardFooter class="flex flex-col justify-center items-center gap-4">
+                    <h3 class="text-lg font-semibold">RP 59.000 / Bulan</h3>
+                    <NuxtLink to="#">
+                      <Button>
+                          Pesan
+                      </Button>
+                    </NuxtLink>
                 </CardFooter>
             </Card>
-            <Card data-aos="fade-up">
-                <CardHeader class="font-semibold text-xl">
-                    Basic
+            <Card class="w-[300px] h-[350px] lg:w-[310px] lg:h-[370px] text-center flex flex-col lg:bg-secondary" data-aos="fade-up">
+                <CardHeader class="">
+                    <h2 class="font-semibold text-xl">
+                        Premium
+                    </h2>
                 </CardHeader>
-                <CardContent>
-
+                <CardContent class="text-center px-10 flex-grow">
+                    <ul class="flex-grow flex flex-col justify-center items-center gap-2">
+                        <li>Semua fitur reguler</li>
+                        <li>Kelola asset</li>
+                        <li>Laporan transaksi</li>
+                        <li>Download Laporan</li>
+                        <li>Domain kostum</li>
+                    </ul>
                 </CardContent>
-                <CardFooter>
-                    <NuxtLink to="#">Pesan</NuxtLink>
+                <CardFooter class="flex flex-col justify-center items-center gap-4">
+                    <h3 class="text-lg font-semibold">RP 99.000 / Bulan</h3>
+                    <NuxtLink to="#">
+                      <Button>
+                          Pesan
+                      </Button>
+                    </NuxtLink>
                 </CardFooter>
             </Card>
-            <Card data-aos="fade-up">
-                <CardHeader class="font-semibold text-xl">
-                    Basic
+            <Card class="w-[300px] h-[350px] text-center flex flex-col" data-aos="fade-up">
+                <CardHeader class="">
+                    <h2 class="font-semibold text-xl">
+                        Instansi
+                    </h2>
                 </CardHeader>
-                <CardContent>
-
+                <CardContent class="text-center px-10 flex-grow">
+                    <ul class="flex-grow flex flex-col justify-center items-center gap-2">
+                        <li>Semua fitur premium</li>
+                        <li></li>
+                        <li>Kostum fitur</li>
+                        <li></li>
+                    </ul>
                 </CardContent>
-                <CardFooter>
-                    <NuxtLink to="#">Pesan</NuxtLink>
+                <CardFooter class="flex flex-col justify-center items-center gap-4">
+                    <h3 class="text-lg font-semibold">Kontak harga</h3>
+                    <NuxtLink to="#">
+                      <Button>
+                          Pesan
+                      </Button>
+                    </NuxtLink>
                 </CardFooter>
             </Card>
         </div>
@@ -200,5 +237,15 @@
         <span class="text-center text-lg text-muted-foreground sm:text-xl" data-aos="fade-up">
             Hubungi kami kapan saja
         </span>
+        <form data-aos="fade-up">
+            <Input type="text"></Input>
+            <Input type="email"></Input>
+            <Textarea rows="10" cols="20">
+
+            </Textarea>
+        </form>
     </section>
+    <footer class="h-[50px] border-t flex flex-col justify-center items-center">
+        @ copyright 2024 sarpras team
+    </footer>
 </template>

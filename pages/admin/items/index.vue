@@ -3,7 +3,7 @@ definePageMeta({
   layout: 'admin'
 })
 
-import { items } from './data'
+import { items } from '@/data/items'
 import { columns } from './column'
 </script>
 <template>

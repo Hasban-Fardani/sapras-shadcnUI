@@ -1,5 +1,5 @@
 <script setup>
-import { items } from "./data";
+import { items } from "@/data/items";
 
 definePageMeta({
     layout: 'admin'

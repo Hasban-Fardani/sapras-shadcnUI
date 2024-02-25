@@ -1,16 +1,4 @@
-export interface Item {
-  id: string;
-  name: string;
-  category: string;
-  supplier: string;
-  unit: string;
-  funding_source: 'BOS' | 'APB';
-  code: string;
-  merk: string;
-  stok: number;
-  min_stok: number;
-  type: 'alat/bahan' | 'asset';
-}
+import type {Item} from '@/types/item'
 
 export const items: Item[] = [
     {
@@ -144,8 +132,8 @@ export const items: Item[] = [
       type: "alat/bahan"
     },
     {
-      id: "10",
-      name: "Kertas HVS",
+      id: "11",
+      name: "Spidol",
       category: "Alat Tulis Kantor",
       supplier: "Toko SerbaSerbi",
       unit: "Rim",
@@ -157,8 +145,8 @@ export const items: Item[] = [
       type: "alat/bahan"
     },
     {
-      id: "10",
-      name: "Kertas HVS",
+      id: "12",
+      name: "Penghapus Papan Tulis",
       category: "Alat Tulis Kantor",
       supplier: "Toko SerbaSerbi",
       unit: "Rim",
@@ -170,8 +158,8 @@ export const items: Item[] = [
       type: "alat/bahan"
     },
     {
-      id: "10",
-      name: "Kertas HVS",
+      id: "13",
+      name: "Kertas Photo",
       category: "Alat Tulis Kantor",
       supplier: "Toko SerbaSerbi",
       unit: "Rim",

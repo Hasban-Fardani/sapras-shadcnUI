@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { type Table } from '@tanstack/vue-table'
 import { computed } from 'vue'
-import type { Item } from '../pages/admin/items/data'
+import type { Item } from '@/types/item'
 
 import { categories, fundingSource } from '../pages/admin/items/option'
 import ItemTableFacetedFilter from './ItemTableFacetedFilter.vue'

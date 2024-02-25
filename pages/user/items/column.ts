@@ -57,21 +57,6 @@ export const columns: ColumnDef<Item>[] = [
     cell: ({ row }) => h('div', {}, row.getValue('unit'))
   },
   {
-    id: 'funding_source',
-    header: ({ column }) => {
-      return h(Button, {
-        variant: 'ghost',
-        onClick: () => column.toggleSorting(column.getIsSorted() === 'asc'),
-      }, () => ['Dana', h(ArrowUpDown, { class: 'ml-2 h-4 w-4' })])
-    },
-    accessorKey: 'funding_source',
-    enableSorting: true,
-    cell: ({ row }) => h('div', {}, row.getValue('funding_source')),
-    filterFn: (row, id, value) => {
-      return value.includes(row.getValue(id))
-    },
-  },
-  {
     id: 'stok',
     header: ({ column }) => {
       return h(Button, {

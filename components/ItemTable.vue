@@ -17,7 +17,7 @@ import {
 } from '@tanstack/vue-table'
 
 import { ref } from 'vue'
-import type { Item } from '../pages/admin/items/data'
+import type { Item } from '@/types/item'
 import ItemTablePagination from './ItemTablePagination.vue'
 import ItemTableToolbar from './ItemTableToolbar.vue'
 import { valueUpdater } from '@/lib/utils'
