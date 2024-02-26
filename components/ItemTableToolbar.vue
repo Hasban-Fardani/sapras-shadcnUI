@@ -3,7 +3,7 @@ import { type Table } from '@tanstack/vue-table'
 import { computed } from 'vue'
 import type { Item } from '@/types/item'
 
-import { categories, fundingSource } from '../pages/admin/items/option'
+import { categories, fundingSource } from '@/data/item_options'
 import ItemTableFacetedFilter from './ItemTableFacetedFilter.vue'
 import ItemTableViewOptions from './ItemTableViewOptions.vue'
 import { Cross2Icon } from '@radix-icons/vue'

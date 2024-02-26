@@ -1,8 +1,8 @@
 import { h } from 'vue'
 import { Button } from '@/components/ui/button'
-import type { ColumnDef } from '@tanstack/vue-table';
 import { ArrowUpDown, ChevronDown } from 'lucide-vue-next'
-import type { Item } from './data'
+import type { ColumnDef } from '@tanstack/vue-table';
+import type { Item } from '~/types/item'
 
 export const columns: ColumnDef<Item>[] = [
   {

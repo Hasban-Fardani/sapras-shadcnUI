@@ -21,6 +21,7 @@ onMounted(() => {
     console.log(colorMode.preference, colorMode.preference != 'dark')
 })
 
+let paths = computed(() => useRouter().currentRoute.value.fullPath.split("/").filter(i => i !== ''))
 </script>
 <template>
     <div class="flex bg-gray-100/40 dark:bg-gray-800/40">
@@ -94,13 +95,23 @@ onMounted(() => {
                 </NuxtLink>
             </nav>
         </div>
-        <div class="flex-1 grid gap-4 p-4 md:gap-8 md:p-10">
+        <div class="flex-1 grid gap-4 md:gap-8 px-6 py-3">
             <div class="flex flex-col">
                 <div class="flex-1">
-                    <div class="flex w-full items-center justify-between">
-                        <Button variant="ghost" class="w-min" @click="isOpen = !isOpen">
-                            <Icon name="material-symbols:menu-rounded" />
-                        </Button>
+                    <div class="flex w-full items-center justify-between mb-4">
+                        <div class="flex items-center gap-4">
+                            <Button variant="outline" class="w-min flex items-center" @click="isOpen = !isOpen">
+                                <Icon name="material-symbols:arrow-back-rounded" v-if="isOpen" />
+                                <Icon name="material-symbols:arrow-forward-rounded" v-else />
+                            </Button>
+                            <div class="text-sm breadcrumbs">
+                                <ul>
+                                    <li v-for="path in paths">
+                                        <NuxtLink :to="'/' + paths.slice(0, paths.indexOf(path)+1).toString().replaceAll(',', '/')">{{ path }}</NuxtLink>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                         <div class="flex items-center space-x-2">
                             <ClientOnly>
                                 <Label for="color-mode">Dark</Label>
@@ -114,4 +125,5 @@ onMounted(() => {
                 </div>
             </div>
         </div>
-</div></template>
+    </div>
+</template>

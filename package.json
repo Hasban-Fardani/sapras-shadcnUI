@@ -23,6 +23,7 @@
     "@vueuse/nuxt": "^10.7.2",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
+    "daisyui": "^4.7.2",
     "date-fns": "^3.3.1",
     "faker": "^5.5.3",
     "lucide-vue-next": "^0.336.0",

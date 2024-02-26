@@ -1,4 +1,5 @@
 const animate = require("tailwindcss-animate")
+const daisyui = require("daisyui")
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -81,5 +82,5 @@ module.exports = {
       },
     },
   },
-  plugins: [animate],
+  plugins: [animate, daisyui],
 }

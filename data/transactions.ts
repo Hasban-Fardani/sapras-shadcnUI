@@ -1,11 +1,4 @@
-export interface Transaction {
-  id: string;
-  unit: string;
-  user: string;
-  date: string;
-  type: 'pengadaan' | 'pengajuan';
-  status: 'disetujui' | 'pending' | 'ditolak' | 'selesai';
-}
+import type { Transaction } from '@/types/transaction'
 
 export const transactions: Transaction[] = [
   { id: '1', unit: 'Unit A', user: 'User 1', date: '2024-02-23', type: 'pengadaan', status: 'disetujui' },

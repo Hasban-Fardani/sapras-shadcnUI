@@ -61,9 +61,9 @@ const table = useVueTable({
 </script>
 <template>
     <!--  -->
-    <div class="flex items-center justify-between px-2 mb-3">
+    <div class="flex items-center justify-between mb-3">
         <div class="flex-1 text-sm text-muted-foreground">
-            <Input placeholder="Filter Items..." :model-value="(table.getColumn('name')?.getFilterValue() as string) ?? ''"
+            <Input placeholder="Cari Barang..." :model-value="(table.getColumn('name')?.getFilterValue() as string) ?? ''"
                 class="h-8 w-[150px] lg:w-[250px]" @input="table.getColumn('name')?.setFilterValue($event.target.value)" />
         </div>
         <div class="flex items-center space-x-6 lg:space-x-8">

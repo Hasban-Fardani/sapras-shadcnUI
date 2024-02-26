@@ -72,9 +72,14 @@ const onSubmit = (e : Event) => {
   <div class="mt-6">
     <Label class="text-md">Jumlah Barang</Label>
     <form @submit="onSubmit" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 border p-3 rounded-md mt-3" id="jumlah" name="jumlah">
-      <div v-for="item in modelValue" class="flex items-center">
+      <div v-for="item in modelValue" class="flex flex-col justify-center" v-if="modelValue.length != 0">
         <Label class="w-[100px]">{{ item }}</Label>
-        <Input type="number" class="w-fit" placeholder="12" name="number"/>
+        <Input type="number" class="w-fit mt-2" placeholder="12" name="number"/>
+      </div>
+      <div v-else>
+        <p class="text-muted">
+          tidak barang yang dipilih
+        </p>
       </div>
     </form>
     <Button type="submit" class="w-fit mt-6" form="jumlah">

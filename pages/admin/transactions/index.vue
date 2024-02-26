@@ -17,7 +17,7 @@ import {
   useVueTable,
 } from '@tanstack/vue-table'
 import { cn, valueUpdater } from '@/lib/utils'
-import {transactions as data} from './data'
+import {transactions as data} from '@/data/transactions'
 import { columns } from './column'
 
 const sorting = ref<SortingState>([])
