@@ -155,10 +155,22 @@
                 </CardHeader>
                 <CardContent class="text-start px-10 flex-grow flex justify-center items-center">
                     <ul class="flex-grow flex flex-col justify-center gap-2">
-                        <li>Dashboard</li>
-                        <li>Kelola Barang</li>
-                        <li>Kelola Akun</li>
-                        <li>Kelola Pengajuan</li>
+                        <li>
+                            <Icon name="material-symbols:check-small"/>
+                            Dashboard
+                        </li>
+                        <li>
+                            <Icon name="material-symbols:check-small"/>
+                            Kelola Barang
+                        </li>
+                        <li>
+                            <Icon name="material-symbols:check-small"/>
+                            Kelola Akun
+                        </li>
+                        <li>
+                            <Icon name="material-symbols:check-small"/>
+                            Kelola Pengajuan
+                        </li>
                     </ul>
                 </CardContent>
                 <CardFooter>
@@ -178,11 +190,26 @@
                 </CardHeader>
                 <CardContent class="text-start px-10 flex-grow flex justify-center items-center">
                     <ul class="flex-grow flex flex-col justify-center gap-2">
-                        <li>Semua fitur reguler</li>
-                        <li>Kelola asset</li>
-                        <li>Laporan transaksi</li>
-                        <li>Download Laporan</li>
-                        <li>Domain kostum</li>
+                        <li>
+                            <Icon name="material-symbols:check-small"/>
+                            Semua fitur reguler
+                        </li>
+                        <li>
+                            <Icon name="material-symbols:check-small"/>
+                            Kelola asset
+                        </li>
+                        <li>
+                            <Icon name="material-symbols:check-small"/>
+                            Laporan transaksi
+                        </li>
+                        <li>
+                            <Icon name="material-symbols:check-small"/>
+                            Download Laporan
+                        </li>
+                        <li>
+                            <Icon name="material-symbols:check-small"/>
+                            Domain kostum
+                        </li>
                     </ul>
                 </CardContent>
                 <CardFooter>
@@ -202,10 +229,14 @@
                 </CardHeader>
                 <CardContent class="text-start px-10 flex-grow flex justify-center items-center">
                     <ul class="flex-grow flex flex-col justify-center gap-2">
-                        <li>Semua fitur premium</li>
-                        <li></li>
-                        <li>Kostum fitur</li>
-                        <li></li>
+                        <li>
+                            <Icon name="material-symbols:check-small"/>
+                            Semua fitur premium
+                        </li>
+                        <li>
+                            <Icon name="material-symbols:check-small"/>
+                            Kostum fitur
+                        </li>
                     </ul>
                 </CardContent>
                 <CardFooter>

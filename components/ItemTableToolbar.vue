@@ -20,7 +20,7 @@ const isFiltered = computed(() => props.table.getState().columnFilters.length > 
 </script>
 
 <template>
-  <div class="flex items-center justify-between">
+  <div class="flex flex-wrap items-center justify-between">
     <div class="flex flex-1 items-center space-x-2">
       <Input
         placeholder="Filter Items..."
@@ -61,7 +61,16 @@ const isFiltered = computed(() => props.table.getState().columnFilters.length > 
           Tambah
         </Button>
       </NuxtLink>
-      <ItemTableViewOptions :table="table" />
+      <!-- <NuxtLink to="/admin/items/categories"> -->
+        <Button 
+        variant="outline"
+        size="sm"
+        class="ml-auto hidden h-8 lg:flex">
+          <!-- <Icon name="material-symbols:add-circle-outline" class="mr-2 h-4 w-4" /> -->
+          <!-- Export -->
+        </Button>
+      <!-- </NuxtLink> -->
+      <!-- <ItemTableViewOptions :table="table" /> -->
     </div>
   </div>
 </template>
