@@ -28,12 +28,12 @@ onMounted(() => {
             <span class="text-lg font-semibold">Sarpras</span>
         </NuxtLink>
         <div class="hidden md:flex gap-4">
-            <NuxtLink to="/user">
+            <NuxtLink to="/headmaster">
                 <Button variant="ghost">
                     Home
                 </Button>
             </NuxtLink>
-            <NuxtLink to="/user/items">
+            <NuxtLink to="/headmaster/history">
                 <Button variant="ghost">
                     History
                 </Button>

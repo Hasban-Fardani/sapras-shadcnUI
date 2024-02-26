@@ -22,55 +22,38 @@ const isFiltered = computed(() => props.table.getState().columnFilters.length > 
 <template>
   <div class="flex flex-wrap items-center justify-between">
     <div class="flex flex-1 items-center space-x-2">
-      <Input
-        placeholder="Filter Items..."
-        :model-value="(table.getColumn('name')?.getFilterValue() as string) ?? ''"
-        class="h-8 w-[150px] lg:w-[250px]"
-        @input="table.getColumn('name')?.setFilterValue($event.target.value)"
-      />
-      <ItemTableFacetedFilter
-        v-if="table.getColumn('category')"
-        :column="table.getColumn('category')"
-        title="Kategori"
-        :options="categories"
-      />
-      <ItemTableFacetedFilter
-        v-if="table.getColumn('funding_source')"
-        :column="table.getColumn('funding_source')"
-        title="Sumber Dana"
-        :options="fundingSource"
-      />
-
-      <Button
-        v-if="isFiltered"
-        variant="ghost"
-        class="h-8 px-2 lg:px-3"
-        @click="table.resetColumnFilters()"
-      >
+      <Input placeholder="Filter Items..." :model-value="(table.getColumn('name')?.getFilterValue() as string) ?? ''"
+        class="h-8 w-[150px] lg:w-[250px]" @input="table.getColumn('name')?.setFilterValue($event.target.value)" />
+      <ItemTableFacetedFilter v-if="table.getColumn('category')" :column="table.getColumn('category')" title="Kategori"
+        :options="categories" />
+      <ItemTableFacetedFilter v-if="table.getColumn('funding_source')" :column="table.getColumn('funding_source')"
+        title="Sumber Dana" :options="fundingSource" />
+      <ItemTableViewOptions :table="table"/>
+      <Button v-if="isFiltered" variant="ghost" class="h-8 px-2 lg:px-3" @click="table.resetColumnFilters()">
         Reset
         <Cross2Icon class="ml-2 h-4 w-4" />
       </Button>
     </div>
     <div class="flex items-center gap-2">
       <NuxtLink to="/admin/items/add">
-        <Button 
-        variant="outline"
-        size="sm"
-        class="ml-auto hidden h-8 lg:flex">
+        <Button variant="outline" size="sm" class="ml-auto hidden h-8 lg:flex">
           <Icon name="material-symbols:add-circle-outline" class="mr-2 h-4 w-4" />
           Tambah
         </Button>
       </NuxtLink>
-      <!-- <NuxtLink to="/admin/items/categories"> -->
-        <Button 
-        variant="outline"
-        size="sm"
-        class="ml-auto hidden h-8 lg:flex">
-          <!-- <Icon name="material-symbols:add-circle-outline" class="mr-2 h-4 w-4" /> -->
-          <!-- Export -->
-        </Button>
-      <!-- </NuxtLink> -->
-      <!-- <ItemTableViewOptions :table="table" /> -->
+      <DropdownMenu>
+        <DropdownMenuTrigger>
+          <Button variant="outline" size="sm" class="ml-auto hidden h-8 lg:flex">
+            <Icon name="ph:download-simple" class="mr-2 h-4 w-4" />
+            Download
+          </Button>
+        </DropdownMenuTrigger>
+        <DropdownMenuContent>
+          <DropdownMenuItem>PDF</DropdownMenuItem>
+          <DropdownMenuItem>Excel</DropdownMenuItem> 
+          <DropdownMenuItem>XLSX</DropdownMenuItem> 
+        </DropdownMenuContent>
+      </DropdownMenu>
     </div>
   </div>
 </template>

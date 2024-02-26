@@ -16,8 +16,9 @@ import {
   getSortedRowModel,
   useVueTable,
 } from '@tanstack/vue-table'
-import { cn, valueUpdater } from '@/lib/utils'
-import {transactions as data} from '@/data/transactions'
+import { MixerHorizontalIcon } from '@radix-icons/vue'
+import { valueUpdater } from '@/lib/utils'
+import { transactions as data} from '@/data/transactions'
 import { columns } from './column'
 
 const sorting = ref<SortingState>([])
@@ -48,16 +49,12 @@ const table = useVueTable({
 <template>
   <div class="w-full">
     <div class="flex gap-2 items-center py-4">
-      <Input
-        class="max-w-sm"
-        placeholder="Filter name..."
-        :model-value="table.getColumn('name')?.getFilterValue() as string"
-        @update:model-value=" table.getColumn('name')?.setFilterValue($event)"
-      />
+      <h2 class="text-2xl font-semibold">History Transaksi</h2>
       <DropdownMenu>
         <DropdownMenuTrigger as-child>
           <Button variant="outline" class="ml-auto">
-            Columns <ChevronDown class="ml-2 h-4 w-4" />
+            <MixerHorizontalIcon class="mr-2 h-4 w-4" />
+            Kolom
           </Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent align="end">

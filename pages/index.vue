@@ -5,7 +5,7 @@
             <NuxtImg src="/icon.svg" alt="icon sarpras" width="30" height="30"/>
             <span class="text-lg font-semibold">Sarpras</span>
         </NuxtLink>
-        <div class="hidden md:flex gap-4">
+        <div class="hidden md:flex gap-8">
             <NuxtLink to="#fitur">
                 <Button variant="ghost">
                     Fitur
@@ -65,7 +65,7 @@
             </span>
             <div class="flex gap-4 pt-4" data-aos="fade-up">
                 <NuxtLink to="/redirect">
-                    <Button>
+                    <Button class="bg-white">
                         Buka Aplikasi
                     </Button>
                 </NuxtLink>

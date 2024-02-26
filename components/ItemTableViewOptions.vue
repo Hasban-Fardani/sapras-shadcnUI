@@ -36,7 +36,7 @@ const columns = computed(() => props.table.getAllColumns()
         class="ml-auto hidden h-8 lg:flex"
       >
         <MixerHorizontalIcon class="mr-2 h-4 w-4" />
-        View
+        Kolom
       </Button>
     </DropdownMenuTrigger>
     <DropdownMenuContent align="end" class="w-[150px]">
