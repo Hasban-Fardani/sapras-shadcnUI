@@ -39,9 +39,13 @@ const onSubmit = handleSubmit((v) => {
       </FormField>
       <FormField v-slot="{ componentField }" name="category">
         <FormItem>
-          <div class="flex gap-2">
+          <div class="flex items-center gap-2">
             <FormLabel>Kategori</FormLabel>
-            <NuxtLink to="/admin/items/add/category" class="text-sm text-primary">baru</NuxtLink>
+            <NuxtLink to="/admin/items/add/category" class="text-sm text-primary">
+              <Button variant="outline" size="xs">
+                <Icon name="material-symbols:add" class="w-4 h-4"/>
+              </Button>
+            </NuxtLink>
           </div>
           <FormControl>
             <Input type="text" placeholder="ATK" v-bind="componentField" />
