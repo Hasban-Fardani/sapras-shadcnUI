@@ -1,6 +1,6 @@
 import { h } from 'vue'
 import { Button } from '@/components/ui/button'
-import { ArrowUpDown, ChevronDown } from 'lucide-vue-next'
+import { ArrowUpDown, Eye, History, Edit } from 'lucide-vue-next'
 import type { ColumnDef } from '@tanstack/vue-table';
 import type { Item } from '~/types/item'
 
@@ -85,11 +85,13 @@ export const columns: ColumnDef<Item>[] = [
   },
   {
     id: 'detail',
-    cell: ({ row }) => h(Button, {
-      variant: 'outline',
-      size: 'sm',
-      onClick: () => navigateTo('/admin/items/' + row.original.id),
-    }, 'detail'),
+    cell: ({ row }) => h(
+      'div',
+      {class: 'flex gap-2'},
+      h(Button, {onClick: () => navigateTo('/admin/items/' + row.original.id), size: null, class: 'p-1.5'}, () => [h(Eye, {class: 'h-5 w-5'})]),
+      h(Button, {onClick: () => navigateTo('/admin/items/edit/' + row.original.id), size: null, class: 'p-1.5'}, () => [h(Edit, {class: 'h-5 w-5'})]),
+      h(Button, {onClick: () => navigateTo('/admin/items/history/' + row.original.id), size: null, class: 'p-1.5'}, () => [h(History, {class: 'h-5 w-5'})])
+    ),
     enableSorting: false,
     enableHiding: false,
   },

@@ -20,9 +20,9 @@ const isFiltered = computed(() => props.table.getState().columnFilters.length > 
 <template>
   <div class="flex flex-wrap items-center justify-between">
     <div class="flex flex-1 items-center space-x-2">
-      <Input placeholder="Filter Items..." :model-value="(table.getColumn('name')?.getFilterValue() as string) ?? ''"
-        class="h-8 w-[150px] lg:w-[250px]" @input="table.getColumn('name')?.setFilterValue($event.target.value)" />
-      <TransactionTableFacetedFilter v-if="table.getColumn('category')" :column="table.getColumn('category')" title="Kategori"
+      <Input placeholder="Filter unit..." :model-value="(table.getColumn('unit')?.getFilterValue() as string) ?? ''"
+        class="h-8 w-[150px] lg:w-[250px]" @input="table.getColumn('unit')?.setFilterValue($event.target.value)" />
+      <TransactionTableFacetedFilter v-if="table.getColumn('unit')" :column="table.getColumn('category')" title="Kategori"
         :options="categories" />
       <TransactionTableFacetedFilter v-if="table.getColumn('funding_source')" :column="table.getColumn('funding_source')"
         title="Sumber Dana" :options="fundingSource" />
