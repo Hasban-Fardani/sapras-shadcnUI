@@ -4,7 +4,11 @@ definePageMeta({
 })
 
 import { items } from '@/data/items'
-import { columns } from './column'
+import { 
+  itemListColumns, 
+  incomingItemColumns, 
+  outgoingItemColumns 
+} from './column'
 </script>
 <template>
   <Tabs default-value="daftar-barang" >
@@ -20,9 +24,13 @@ import { columns } from './column'
       </TabsTrigger>
     </TabsList>
     <TabsContent value="daftar-barang">
-      <ItemTable :data="items" :columns="columns" class="mt-4"/>
+      <ItemTable :data="items" :columns="itemListColumns" class="mt-4"/>
     </TabsContent>
     <TabsContent value="barang-masuk">
+      <ItemTable :data="items" :columns="incomingItemColumns" class="mt-4"/>
+    </TabsContent>
+    <TabsContent value="barang-keluar">
+      <ItemTable :data="items" :columns="outgoingItemColumns" class="mt-4"/>
     </TabsContent>
   </Tabs>
 </template>
