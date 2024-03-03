@@ -1,6 +1,7 @@
 import { h } from 'vue';
 import { Button } from '@/components/ui/button'
-import { ArrowUpDown, ChevronDown } from 'lucide-vue-next'
+import { ArrowUpDown, ChevronDown, Eye } from 'lucide-vue-next'
+import type { ColumnDef } from '@tanstack/vue-table';
 import type { Transaction } from '@/types/transaction';
 
 export const columns: ColumnDef<Transaction>[] = [
@@ -19,7 +20,7 @@ export const columns: ColumnDef<Transaction>[] = [
   {
     id: 'user',
     accessorKey: 'user',
-    header: 'User',
+    header: 'Name',
     enableSorting: true,
     cell: ({ row }) => h('div', {}, row.getValue('user'))
   },
@@ -36,5 +37,15 @@ export const columns: ColumnDef<Transaction>[] = [
     header: 'Date',
     enableSorting: true,
     cell: ({ row }) => h('div', {}, row.getValue('date'))
+  },
+  {
+    id: 'detail',
+    cell: ({ row }) => h(
+      'div',
+      {class: 'flex gap-2'},
+      h(Button, {onClick: () => navigateTo('/admin/submission/' + row.original.id), size: null, class: 'p-1.5'}, () => [h(Eye, {class: 'h-5 w-5'})]),
+    ),
+    enableSorting: false,
+    enableHiding: false,
   },
 ];
