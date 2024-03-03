@@ -38,9 +38,14 @@ onMounted(() => {
                     Barang
                 </Button>
             </NuxtLink>
-            <NuxtLink to="/user/forms">
+            <NuxtLink to="/user/submission">
                 <Button variant="ghost">
                     Pengajuan
+                </Button>
+            </NuxtLink>
+            <NuxtLink to="/user/request">
+                <Button variant="ghost">
+                    Permintaan
                 </Button>
             </NuxtLink>
         </div>
@@ -63,8 +68,11 @@ onMounted(() => {
                     <NuxtLink to="/user/items">
                         <DropdownMenuItem>Barang</DropdownMenuItem>
                     </NuxtLink>
-                    <NuxtLink to="/user/forms">
+                    <NuxtLink to="/user/submission">
                         <DropdownMenuItem>Pengajuan</DropdownMenuItem>
+                    </NuxtLink>
+                    <NuxtLink to="/user/requests">
+                        <DropdownMenuItem>Permintaan</DropdownMenuItem>
                     </NuxtLink>
                     <DropdownMenuItem>
                         <div class="flex items-center space-x-2">
