@@ -1,8 +1,7 @@
 <script setup>
 definePageMeta({
-  layout: 'admin'
+    layout: 'headmaster'
 })
 </script>
 <template>
-    
 </template>

@@ -24,13 +24,6 @@ export const columns: ColumnDef<Transaction>[] = [
     cell: ({ row }) => h('div', {}, row.getValue('user'))
   },
   {
-    id: 'type',
-    accessorKey: 'type',
-    header: 'Type',
-    enableSorting: true,
-    cell: ({ row }) => h('div', {}, row.getValue('type'))
-  },
-  {
     id: 'status',
     accessorKey: 'status',
     header: 'Status',

@@ -33,6 +33,16 @@ onMounted(() => {
                     Home
                 </Button>
             </NuxtLink>
+            <NuxtLink to="/headmaster/submission">
+                <Button variant="ghost">
+                    Pengajuan
+                </Button>
+            </NuxtLink>
+            <NuxtLink to="/headmaster/request">
+                <Button variant="ghost">
+                    Permintaan
+                </Button>
+            </NuxtLink>
             <NuxtLink to="/headmaster/history">
                 <Button variant="ghost">
                     History

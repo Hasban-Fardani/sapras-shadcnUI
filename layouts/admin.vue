@@ -67,13 +67,13 @@ let paths = computed(() => useRouter().currentRoute.value.fullPath.split("/").fi
                         Akun
                     </Button>
                 </NuxtLink>
-                <NuxtLink to="/admin/transactions">
+                <NuxtLink to="/admin/submission">
                     <Button variant="ghost" class="w-full flex justify-start gap-2 rounded-none">
                         <Icon name="material-symbols:request-page" />
                         Pengajuan
                     </Button>
                 </NuxtLink>
-                <NuxtLink to="/admin/transactions">
+                <NuxtLink to="/admin/request">
                     <Button variant="ghost" class="w-full flex justify-start gap-2 rounded-none">
                         <Icon name="carbon:request-quote" />
                         Permintaan

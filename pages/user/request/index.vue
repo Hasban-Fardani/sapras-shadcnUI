@@ -24,7 +24,7 @@ const onSubmit = (e : Event) => {
 }
 </script>
 <template>
-  <h2 class="text-2xl font-bold">Form Pengajuan Barang</h2>
+  <h2 class="text-2xl font-bold">Form Permintaan Barang</h2>
   <!-- Start select items -->
   <div class="mt-6">
     <Label class="text-md">Pilih Barang</Label>
