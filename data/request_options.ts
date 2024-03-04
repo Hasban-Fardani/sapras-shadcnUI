@@ -8,8 +8,8 @@ export const status = [
     label: "Pending",
   },
   {
-    value: "pending",
-    label: "Pending",
+    value: "Ditolak",
+    label: "Ditolak",
   },
   {
     value: "selesai",

@@ -66,7 +66,7 @@ const table = useVueTable({
 
 <template>
   <div class="space-y-4">
-    <TransactionTableToolbar :table="table" />
+    <RequestTableToolbar :table="table" />
     <div class="rounded-md border">
       <Table>
         <TableHeader>

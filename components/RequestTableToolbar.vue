@@ -23,7 +23,7 @@ const isFiltered = computed(() => props.table.getState().columnFilters.length > 
       <Input placeholder="Filter unit..." :model-value="(table.getColumn('unit')?.getFilterValue() as string) ?? ''"
         class="h-8 w-[150px] lg:w-[250px]" @input="table.getColumn('unit')?.setFilterValue($event.target.value)" />
       <RequestTableFacetedFilter v-if="table.getColumn('status')" :column="table.getColumn('status')"
-        title="Sumber Dana" :options="status" />
+        title="Status" :options="status" />
       <RequestTableViewOptions :table="table"/>
       <Button v-if="isFiltered" variant="ghost" class="h-8 px-2 lg:px-3" @click="table.resetColumnFilters()">
         Reset
