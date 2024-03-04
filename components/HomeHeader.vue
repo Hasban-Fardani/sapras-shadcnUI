@@ -29,7 +29,7 @@
         </div>
         <div class="flex items-center gap-1">
             <DropdownMenu>
-                <DropdownMenuTrigger class="md:hidden">
+                <DropdownMenuTrigger class="md:hidden" aria-label="Open main menu">
                     <Icon name="material-symbols:menu-rounded"/>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent class="">

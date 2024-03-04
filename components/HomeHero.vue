@@ -21,6 +21,6 @@
                 </NuxtLink>
             </div>
         </div>
-        <NuxtImg src="/images/dashboard.png" width="972" height="558" class="drop-shadow-xl shadow-gray-100" data-aos="fade-up"/>
+        <NuxtImg src="/images/dashboard.png" alt="Dashboard Sarpras" width="972" height="558" class="drop-shadow-xl shadow-gray-100" format="webp" data-aos="fade-up"/>
     </section>
 </template>

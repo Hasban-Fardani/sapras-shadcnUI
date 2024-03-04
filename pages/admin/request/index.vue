@@ -3,12 +3,12 @@ definePageMeta({
   layout: 'admin'
 })
 
-import {transactions as data} from '@/data/transactions'
+import {requests as data} from '@/data/request'
 import { columns } from './column'
 
 </script>
 <template>
   <div class="w-full">
-    <TransactionTable :data="data" :columns="columns"/>
+    <RequestTable :data="data" :columns="columns"/>
   </div>
 </template>
