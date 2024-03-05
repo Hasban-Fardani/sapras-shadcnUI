@@ -17,9 +17,9 @@ import {
 } from '@tanstack/vue-table'
 
 import { ref } from 'vue'
-import type { Transaction } from '@/types/transaction'
-import TransactionTablePagination from './TransactionTablePagination.vue'
-import TransactionTableToolbar from './TransactionTableToolbar.vue'
+import type { Submission } from '@/types/submission'
+import SubmissionTablePagination from './SubmissionTablePagination.vue'
+import SubmissionTableToolbar from './SubmissionTableToolbar.vue'
 import { valueUpdater } from '@/lib/utils'
 import {
   Table,
@@ -31,8 +31,8 @@ import {
 } from './ui/table'
 
 interface DataTableProps {
-  columns: ColumnDef<Transaction, any>[]
-  data: Transaction[]
+  columns: ColumnDef<Submission, any>[]
+  data: Submission[]
 }
 const props = defineProps<DataTableProps>()
 
@@ -66,7 +66,7 @@ const table = useVueTable({
 
 <template>
   <div class="space-y-4">
-    <TransactionTableToolbar :table="table" />
+    <SubmissionTableToolbar :table="table" />
     <div class="rounded-md border">
       <Table>
         <TableHeader>
@@ -101,6 +101,6 @@ const table = useVueTable({
       </Table>
     </div>
 
-    <TransactionTablePagination :table="table" />
+    <SubmissionTablePagination :table="table" />
   </div>
 </template>

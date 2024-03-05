@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { type Table } from '@tanstack/vue-table'
-import type { Transaction } from '@/types/transaction'
+import type { Submission } from '@/types/submission'
 import {ChevronLeftIcon} from '@radix-icons/vue'
 import {ChevronRightIcon} from '@radix-icons/vue'
 import {DoubleArrowLeftIcon} from '@radix-icons/vue'
@@ -16,7 +16,7 @@ import {
 import { Button } from './ui/button'
 
 interface DataTablePaginationProps {
-  table: Table<Transaction>
+  table: Table<Submission>
 }
 defineProps<DataTablePaginationProps>()
 </script>

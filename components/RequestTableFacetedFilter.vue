@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import type { Column } from '@tanstack/vue-table'
 import type { Component } from 'vue'
-import { computed } from 'vue'
 import type { Request } from '@/types/request'
+import { computed } from 'vue'
 import {PlusCircledIcon} from '@radix-icons/vue'
 import {CheckIcon} from '@radix-icons/vue'
 

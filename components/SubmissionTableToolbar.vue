@@ -1,15 +1,15 @@
 <script setup lang="ts">
 import { type Table } from '@tanstack/vue-table'
 import { computed } from 'vue'
-import type { Transaction } from '@/types/transaction'
+import type { Submission } from '@/types/submission'
 
-import { categories, fundingSource } from '@/data/item_options'
+import { status } from '@/data/submission_options'
 import { Cross2Icon } from '@radix-icons/vue'
 import { Button } from './ui/button'
 import { Input } from './ui/input'
 
 interface DataTableToolbarProps {
-  table: Table<Transaction>
+  table: Table<Submission>
 }
 
 const props = defineProps<DataTableToolbarProps>()
@@ -22,11 +22,9 @@ const isFiltered = computed(() => props.table.getState().columnFilters.length > 
     <div class="flex flex-1 items-center space-x-2">
       <Input placeholder="Filter unit..." :model-value="(table.getColumn('unit')?.getFilterValue() as string) ?? ''"
         class="h-8 w-[150px] lg:w-[250px]" @input="table.getColumn('unit')?.setFilterValue($event.target.value)" />
-      <TransactionTableFacetedFilter v-if="table.getColumn('unit')" :column="table.getColumn('category')" title="Kategori"
-        :options="categories" />
-      <TransactionTableFacetedFilter v-if="table.getColumn('funding_source')" :column="table.getColumn('funding_source')"
-        title="Sumber Dana" :options="fundingSource" />
-      <TransactionTableViewOptions :table="table"/>
+      <SubmissionTableFacetedFilter v-if="table.getColumn('status')" :column="table.getColumn('status')" title="Status"
+        :options="status" />
+      <SubmissionTableViewOptions :table="table"/>
       <Button v-if="isFiltered" variant="ghost" class="h-8 px-2 lg:px-3" @click="table.resetColumnFilters()">
         Reset
         <Cross2Icon class="ml-2 h-4 w-4" />

@@ -101,6 +101,6 @@ const table = useVueTable({
       </Table>
     </div>
 
-    <TransactionTablePagination :table="table" />
+    <RequestTablePagination :table="table" />
   </div>
 </template>

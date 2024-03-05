@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { Table } from '@tanstack/vue-table'
 import { computed } from 'vue'
-import type { Transaction } from '@/types/transaction'
+import type { Submission } from '@/types/submission'
 import {MixerHorizontalIcon} from '@radix-icons/vue'
 
 import { Button } from './ui/button'
@@ -15,7 +15,7 @@ import {
 } from './ui/dropdown-menu'
 
 interface DataTableViewOptionsProps {
-  table: Table<Transaction>
+  table: Table<Submission>
 }
 
 const props = defineProps<DataTableViewOptionsProps>()

@@ -1,10 +1,10 @@
 export const status = [
   {
-    value: "disetujui",
+    value: "Disetujui",
     label: "Disetujui",
   },
   {
-    value: "pending",
+    value: "Pending",
     label: "Pending",
   },
   {
@@ -12,7 +12,7 @@ export const status = [
     label: "Ditolak",
   },
   {
-    value: "selesai",
+    value: "Selesai",
     label: "Selesai",
   }
 ];

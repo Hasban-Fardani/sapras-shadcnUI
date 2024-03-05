@@ -23,14 +23,14 @@ import {
         Barang Keluar
       </TabsTrigger>
     </TabsList>
-    <TabsContent value="daftar-barang">
+    <LazyTabsContent value="daftar-barang">
       <ItemTable :data="items" :columns="itemListColumns" class="mt-4"/>
-    </TabsContent>
-    <TabsContent value="barang-masuk">
+    </LazyTabsContent>
+    <LazyTabsContent value="barang-masuk">
       <ItemTable :data="items" :columns="incomingItemColumns" class="mt-4"/>
-    </TabsContent>
-    <TabsContent value="barang-keluar">
+    </LazyTabsContent>
+    <LazyTabsContent value="barang-keluar">
       <ItemTable :data="items" :columns="outgoingItemColumns" class="mt-4"/>
-    </TabsContent>
+    </LazyTabsContent>
   </Tabs>
 </template>

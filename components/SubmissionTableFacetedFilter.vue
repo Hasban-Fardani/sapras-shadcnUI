@@ -2,7 +2,7 @@
 import type { Column } from '@tanstack/vue-table'
 import type { Component } from 'vue'
 import { computed } from 'vue'
-import type { Transaction } from '@/types/transaction'
+import type { Submission } from '@/types/submission'
 import {PlusCircledIcon} from '@radix-icons/vue'
 import {CheckIcon} from '@radix-icons/vue'
 
@@ -19,7 +19,7 @@ import { Separator } from './ui/separator'
 import { cn } from '@/lib/utils'
 
 interface DataTableFacetedFilter {
-  column?: Column<Transaction, any>
+  column?: Column<Submission, any>
   title?: string
   options: {
     label: string

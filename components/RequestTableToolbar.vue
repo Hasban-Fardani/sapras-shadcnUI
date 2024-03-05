@@ -1,12 +1,15 @@
 <script setup lang="ts">
 import { type Table } from '@tanstack/vue-table'
-import { computed } from 'vue'
 import type { Request } from '@/types/request'
+import { computed } from 'vue'
 
 import { status } from '@/data/request_options'
 import { Cross2Icon } from '@radix-icons/vue'
 import { Button } from './ui/button'
 import { Input } from './ui/input'
+
+import RequestTableFacetedFilter from './RequestTableFacetedFilter.vue'
+import RequestTableViewOptions from './RequestTableViewOptions.vue'
 
 interface DataTableToolbarProps {
   table: Table<Request>
@@ -52,4 +55,4 @@ const isFiltered = computed(() => props.table.getState().columnFilters.length > 
       </DropdownMenu>
     </div>
   </div>
-</template>~/data/request_options
+</template>

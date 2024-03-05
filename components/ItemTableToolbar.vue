@@ -1,14 +1,15 @@
 <script setup lang="ts">
 import { type Table } from '@tanstack/vue-table'
-import { computed } from 'vue'
 import type { Item } from '@/types/item'
+import { computed } from 'vue'
 
 import { categories, fundingSource } from '@/data/item_options'
-import ItemTableFacetedFilter from './ItemTableFacetedFilter.vue'
-import ItemTableViewOptions from './ItemTableViewOptions.vue'
 import { Cross2Icon } from '@radix-icons/vue'
 import { Button } from './ui/button'
 import { Input } from './ui/input'
+
+import ItemTableFacetedFilter from './ItemTableFacetedFilter.vue'
+import ItemTableViewOptions from './ItemTableViewOptions.vue'
 
 interface DataTableToolbarProps {
   table: Table<Item>
