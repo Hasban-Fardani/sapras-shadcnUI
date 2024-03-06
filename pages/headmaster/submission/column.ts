@@ -50,7 +50,7 @@ export const columns: ColumnDef<Submission>[] = [
     cell: ({ row }) => h(
       'div',
       {class: 'flex gap-2'},
-      h(Button, {onClick: () => navigateTo('/admin/submission/' + row.original.id), size: null, class: 'p-1.5'}, () => [h(Eye, {class: 'h-5 w-5'})]),
+      h(Button, {onClick: () => navigateTo('/headmaster/submission/' + row.original.id), size: null, class: 'p-1.5'}, () => [h(Eye, {class: 'h-5 w-5'})]),
     ),
     enableSorting: false,
     enableHiding: false,

@@ -1,12 +1,12 @@
 <script setup>
-import { requests } from '@/data/request'
+import { submissions } from '@/data/submission'
 import { CardHeader } from '~/components/ui/card';
 definePageMeta({
-    layout: 'admin'
+    layout: 'headmaster'
 });
 
 const id = useRoute().params.id;
-let request = requests.find(i => i.id == id);
+let request = submissions.find(i => i.id == id);
 </script>
 <template>
   <div> 
@@ -27,7 +27,7 @@ let request = requests.find(i => i.id == id);
             <p>: {{ request.nature }}</p>
 
             <h3>Perihal</h3>
-            <p>: Permintaan {{ request.categories.join("/").toString() }}</p>
+            <p>: Pengajuan {{ request.categories.join("/").toString() }}</p>
         </CardContent>
     </Card>
     <Card class="mt-4">
