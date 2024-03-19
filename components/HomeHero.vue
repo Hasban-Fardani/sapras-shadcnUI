@@ -10,7 +10,7 @@
             </span>
             <div class="flex gap-4 pt-4" data-aos="fade-up">
                 <NuxtLink to="/redirect">
-                    <Button class="bg-white">
+                    <Button class="bg-white bg-primary">
                         Buka Aplikasi
                     </Button>
                 </NuxtLink>

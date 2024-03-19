@@ -25,6 +25,10 @@ const { handleSubmit, handleReset } = useForm({
 const onSubmit = handleSubmit((v) => {
   console.log(v)
 })
+
+let jumlah = 0
+const data = {
+}
 </script>
 <template>
   <Tabs default-value="barang">
@@ -40,93 +44,16 @@ const onSubmit = handleSubmit((v) => {
       </TabsTrigger>
     </TabsList>
     <LazyTabsContent value="barang">
-      <form @submit="onSubmit" class="flex flex-col gap-3">
-          <FormField v-slot="{ componentField }" name="name">
-            <FormItem>
-              <FormLabel>Nama</FormLabel>
-              <FormControl>
-                <Input type="text" placeholder="Spidol" v-bind="componentField"/>
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          </FormField>
-          <FormField v-slot="{ componentField }" name="category">
-            <FormItem>
-              <div class="flex items-center gap-2">
-                <FormLabel>Kategori</FormLabel>
-                <NuxtLink to="/admin/items/add/category" class="text-sm text-primary">
-                  <Button variant="outline" size="xs">
-                    <Icon name="material-symbols:add" class="w-4 h-4"/>
-                  </Button>
-                </NuxtLink>
-              </div>
-              <FormControl>
-                <Input type="text" placeholder="ATK" v-bind="componentField" />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          </FormField>
-        <FormField v-slot="{ componentField }" name="supplier">
-          <FormItem>
-            <FormLabel>Suplier</FormLabel>
-            <FormControl>
-              <Input type="text" placeholder="Toko Sejahtera" v-bind="componentField" />
-            </FormControl>
-            <FormMessage />
-          </FormItem>
-        </FormField>
-        <FormField v-slot="{ componentField }" name="unit">
-          <FormItem>
-            <FormLabel>Satuan</FormLabel>
-            <FormControl>
-              <Input type="text" placeholder="unit, rim, lusin" v-bind="componentField" />
-            </FormControl>
-            <FormMessage />
-          </FormItem>
-        </FormField>
-        <FormField v-slot="{ componentField }" name="funding_resource">
-          <FormItem>
-            <FormLabel>Sumber Dana</FormLabel>
-            <FormControl>
-              <Input type="text" placeholder="BOS, APB" v-bind="componentField"/>
-            </FormControl>
-            <FormMessage />
-          </FormItem>
-        </FormField>
-        <FormField v-slot="{ componentField }" name="merk">
-          <FormItem>
-            <FormLabel>Merk</FormLabel>
-            <FormControl>
-              <Input type="text" placeholder="Sinar Dunia" v-bind="componentField"/>
-            </FormControl>
-            <FormMessage />
-          </FormItem>
-        </FormField>
-        <FormField v-slot="{ componentField }" name="stok">
-          <FormItem>
-            <FormLabel>Stok</FormLabel>
-            <FormControl>
-              <Input type="number" placeholder="200" v-bind="componentField" min="0"/>
-            </FormControl>
-            <FormMessage />
-          </FormItem>
-        </FormField>
-        <FormField v-slot="{ componentField }" name="min_stok">
-          <FormItem>
-            <FormLabel>Stok Minimum</FormLabel>
-            <FormControl>
-              <Input type="number" placeholder="200" v-bind="componentField" min="0"/>
-            </FormControl>
-            <FormMessage />
-          </FormItem>
-        </FormField>
-        <Button type="submit" class="w-fit">
-          Submit
-        </Button>
-      </form>
+      <FormAddItem/>
     </LazyTabsContent>
     <LazyTabsContent value="barang-masuk">
-
+      <Input type="number" name="jumlah" v-model="jumlah" class="mt-4"/>
+      <form action="" class="mt-4">
+        <div class="flex" v-for="i in jumlah" :key="i">
+          <Input type="text" placeholder="Kode Barang" />
+          <Input type="number" placeholder="jumlah barang" max="100"/> 
+        </div>
+      </form>
     </LazyTabsContent>
     <LazyTabsContent value="barang-keluar">
 

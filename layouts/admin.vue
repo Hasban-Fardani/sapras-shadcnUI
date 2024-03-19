@@ -1,5 +1,6 @@
 <script setup>
 const colorMode = useColorMode()
+colorMode.preference = "light"
 
 let isOpen = ref(false)
 let checked = ref(true)
@@ -25,7 +26,7 @@ let paths = computed(() => useRouter().currentRoute.value.fullPath.split("/").fi
 </script>
 <template>
     <div class="flex bg-gray-100/40 dark:bg-gray-800/40">
-        <div class="w-[270px] border-r bg-card shadow md:block" v-show="isOpen">
+        <div class="w-[270px] border-r bg-card shadow md:block min-h-screen" v-show="isOpen">
             <NuxtLink to="/">
                 <Button variant="ghost" class="w-full flex justify-start gap-2 rounded-none py-8">
                     <NuxtImg src="/icon.svg" width="30" height="30" />

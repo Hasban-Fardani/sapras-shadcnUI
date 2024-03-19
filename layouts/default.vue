@@ -3,5 +3,5 @@
 </template>
 <script setup>
 const preference = useColorMode()
-preference.value = "dark"
+preference.value = "light"
 </script>

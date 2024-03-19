@@ -1,5 +1,7 @@
 <script setup>
 const colorMode = useColorMode()
+colorMode.preference = "light"
+
 let checked = ref(true)
 let isOpen = ref(false)
 
