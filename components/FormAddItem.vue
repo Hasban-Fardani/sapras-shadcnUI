@@ -67,15 +67,6 @@ const onSubmit = handleSubmit((v) => {
                 <FormMessage />
             </FormItem>
         </FormField>
-        <FormField v-slot="{ componentField }" name="funding_resource">
-            <FormItem>
-                <FormLabel>Sumber Dana</FormLabel>
-                <FormControl>
-                    <Input type="text" placeholder="BOS, APB" v-bind="componentField" />
-                </FormControl>
-                <FormMessage />
-            </FormItem>
-        </FormField>
         <FormField v-slot="{ componentField }" name="merk">
             <FormItem>
                 <FormLabel>Merk</FormLabel>

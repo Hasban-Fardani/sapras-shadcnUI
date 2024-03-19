@@ -25,10 +25,6 @@ const { handleSubmit, handleReset } = useForm({
 const onSubmit = handleSubmit((v) => {
   console.log(v)
 })
-
-let jumlah = 0
-const data = {
-}
 </script>
 <template>
   <Tabs default-value="barang">
@@ -44,19 +40,13 @@ const data = {
       </TabsTrigger>
     </TabsList>
     <LazyTabsContent value="barang">
-      <FormAddItem/>
+      <LazyFormAddItem/>
     </LazyTabsContent>
     <LazyTabsContent value="barang-masuk">
-      <Input type="number" name="jumlah" v-model="jumlah" class="mt-4"/>
-      <form action="" class="mt-4">
-        <div class="flex" v-for="i in jumlah" :key="i">
-          <Input type="text" placeholder="Kode Barang" />
-          <Input type="number" placeholder="jumlah barang" max="100"/> 
-        </div>
-      </form>
+      <LazyFormAddIncomingItem/>
     </LazyTabsContent>
     <LazyTabsContent value="barang-keluar">
-
+      <LazyFormAddOutgoingItem/>
     </LazyTabsContent>
   </Tabs>
 </template>
